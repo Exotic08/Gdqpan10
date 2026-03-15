@@ -1,0 +1,20 @@
+Ask1: Đâu là ngôn ngữ lập trình chạy chủ yếu trên trình duyệt web?
+answer1: Python
+answer2: JavaScript
+answer3: C++
+answer4: Java
+Key: 2
+
+Ask2: Những đặc điểm nào sau đây thuộc về ngôn ngữ JavaScript? (Chọn nhiều đáp án)
+answer1: Là ngôn ngữ kịch bản (scripting language)
+answer2: Cần được biên dịch thành mã máy trước khi chạy
+answer3: Hỗ trợ lập trình hướng đối tượng
+answer4: Không thể tương tác với DOM HTML
+Key: 1,0,1,0
+
+Ask3: Đâu là thẻ HTML đúng để tạo một liên kết (hyperlink)?
+answer1: <link>
+answer2: <a>
+answer3: <href>
+answer4: <hyperlink>
+Key: 2
