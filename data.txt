@@ -1,20 +1,384 @@
-Ask1: Đâu là ngôn ngữ lập trình chạy chủ yếu trên trình duyệt web?
-answer1: Python
-answer2: JavaScript
-answer3: C++
-answer4: Java
+Ask1: Ren được dùng để làm gì?
+answer1: Thay cho mối hàn
+answer2: Nối các chi tiết với nhau
+answer3: Cố định chi tiết
+answer4: Ghép các chi tiết hoặc truyền lực
+Key: 4
+
+Ask2: Ren ngoài có tên gọi khác là gì?
+answer1: Ren ngược
+answer2: Ren lỗ
+answer3: Ren hệ mét
+answer4: Ren trục
+Key: 4
+
+Ask3: Khi biểu diễn ren thấy trên mặt phẳng song song với trục ren thì đường giới hạn ren vẽ bằng nét gì?
+answer1: Nét đứt mảnh
+answer2: Nét liền mảnh
+answer3: Nét gạch chấm
+answer4: Nét liền đậm
+Key: 4
+
+Ask4: Ren trong có tên gọi khác là gì?
+answer1: Ren trục
+answer2: Ren lỗ
+answer3: Ren hệ mét
+answer4: Ren ngược
 Key: 2
 
-Ask2: Những đặc điểm nào sau đây thuộc về ngôn ngữ JavaScript? (Chọn nhiều đáp án)
-answer1: Là ngôn ngữ kịch bản (scripting language)
-answer2: Cần được biên dịch thành mã máy trước khi chạy
-answer3: Hỗ trợ lập trình hướng đối tượng
-answer4: Không thể tương tác với DOM HTML
-Key: 1,0,1,0
+Ask5: Trong kí hiệu quy ước ren, dạng ren ống trụ được kí hiệu như thế nào?
+answer1: Kí hiệu là M
+answer2: Kí hiệu là D
+answer3: Kí hiệu là G
+answer4: Kí hiệu là Tr
+Key: 3
 
-Ask3: Đâu là thẻ HTML đúng để tạo một liên kết (hyperlink)?
-answer1: <link>
-answer2: <a>
-answer3: <href>
-answer4: <hyperlink>
+Ask6: Khi biểu diễn ren thấy trên mặt phẳng song song với trục ren thì đường đỉnh ren vẽ bằng nét gì?
+answer1: Nét gạch chấm
+answer2: Nét đứt mảnh
+answer3: Nét liền mảnh
+answer4: Nét liền đậm
+Key: 4
+
+Ask7: Khi biểu diễn ren thấy trên mặt phẳng song song với trục ren thì đường chân ren vẽ bằng nét gì?
+answer1: Nét gạch chấm
+answer2: Nét liền mảnh
+answer3: Nét liền đậm
+answer4: Nét đứt mảnh
 Key: 2
+
+Ask8: Khi cần thể hiện ren khuất, quy ước đường đỉnh ren, đường chân ren và đường giới hạn ren vẽ bằng nét gì?
+answer1: Nét gạch chấm
+answer2: Nét đứt mảnh
+answer3: Nét liền mảnh
+answer4: Nét liền đậm
+Key: 2
+
+Ask9: Trong kí hiệu quy ước ren, dạng ren hệ mét được kí hiệu như thế nào?
+answer1: Kí hiệu là M
+answer2: Kí hiệu là Tr
+answer3: Kí hiệu là D
+answer4: Kí hiệu là G
+Key: 1
+
+Ask10: Trong kí hiệu quy ước ren, dạng ren hình thang được kí hiệu như thế nào?
+answer1: Kí hiệu là M
+answer2: Kí hiệu là Tr
+answer3: Kí hiệu là D
+answer4: Kí hiệu là G
+Key: 2
+
+Ask11: Khi biểu diễn ren thấy trên mặt phẳng vuông góc với trục ren thì đường chân ren được vẽ như thế nào?
+answer1: Vẽ cả vòng tròn bằng nét liền mảnh
+answer2: Vẽ 1/4 vòng tròn bằng nét liền mảnh
+answer3: Vẽ 3/4 vòng tròn bằng nét liền mảnh
+answer4: Vẽ 1/2 vòng tròn bằng nét liền mảnh
+Key: 3
+
+Ask12: Khi biểu diễn ren thấy trên mặt phẳng vuông góc với trục ren thì đường đỉnh ren được vẽ như thế nào?
+answer1: Vẽ cả vòng tròn bằng nét liền đậm
+answer2: Vẽ hết vòng tròn bằng nét liền mảnh
+answer3: Vẽ 3/4 vòng tròn bằng nét liền đậm
+answer4: Vẽ 1/4 vòng tròn bằng nét liền mảnh
+Key: 1
+
+Ask13: Bản vẽ chi tiết thể hiện nội dung gì?
+answer1: Hình dạng, vị trí, quan hệ lắp ráp giữa các chi tiết
+answer2: Hình dạng, kích thước, vật liệu, yêu cầu kĩ thuật của chi tiết
+answer3: Hình dạng, vị trí, yêu cầu kĩ thuật của chi tiết
+answer4: Hình dạng, kích thước, vị trí của chi tiết
+Key: 2
+
+Ask14: Khi đọc bản vẽ chi tiết để biết các yêu cầu về gia công, xử lí bề mặt sau khi gia công, cần đọc phần nào của bản vẽ?
+answer1: Kích thước
+answer2: Hình biểu diễn
+answer3: Khung tên
+answer4: Yêu cầu kĩ thuật
+Key: 4
+
+Ask15: Bản vẽ chi tiết dùng để làm gì?
+answer1: Chế tạo và kiểm tra một chi tiết
+answer2: Chế tạo, lắp ráp và kiểm tra sản phẩm
+answer3: Chế tạo và lắp ráp các chi tiết
+answer4: Lắp ráp và kiểm tra sản phẩm
+Key: 1
+
+Ask16: Dựa vào cấu tạo, kích thước lần lượt về từng phần chi tiết, vẽ hình dạng bên ngoài trước, hình dạng bên trong sau là bước nào khi lập bản vẽ chi tiết?
+answer1: Bố trí các hình biểu diễn
+answer2: Vẽ mờ
+answer3: Tô đậm
+answer4: Hoàn thiện bản vẽ
+Key: 2
+
+Ask17: Kiểm tra sai sót, xóa bỏ các nét thừa rồi tô đậm các nét theo quy định là bước nào khi lập bản vẽ chi tiết?
+answer1: Vẽ mờ
+answer2: Bố trí các hình biểu diễn
+answer3: Tô đậm
+answer4: Hoàn thiện bản vẽ
+Key: 3
+
+Ask18: Khi đọc bản vẽ chi tiết để biết tên gọi chi tiết, vật liệu chế tạo, tỉ lệ, cần đọc phần nào của bản vẽ?
+answer1: Khung tên
+answer2: Yêu cầu kĩ thuật
+answer3: Hình biểu diễn
+answer4: Kích thước
+Key: 1
+
+Ask19: Khi đọc bản vẽ chi tiết để hình dung hình dạng, kết cấu của chi tiết, cần căn cứ vào phần nào của bản vẽ?
+answer1: Kích thước
+answer2: Yêu cầu kĩ thuật
+answer3: Hình biểu diễn
+answer4: Khung tên
+Key: 3
+
+Ask20: Viết các yêu cầu kĩ thuật và ghi nội dung khung tên là bước nào khi lập bản vẽ chi tiết?
+answer1: Vẽ mờ
+answer2: Hoàn thiện bản vẽ
+answer3: Bố trí các hình biểu diễn
+answer4: Tô đậm
+Key: 2
+
+Ask21: Trình tự đúng để đọc bản vẽ chi tiết là gì?
+answer1: 4-3-2-1
+answer2: 2-3-1-4
+answer3: 3-2-4-1
+answer4: 1-2-3-4
+Key: 2
+
+Ask22: Bản vẽ thể hiện hình dạng, kích thước, vật liệu chế tạo, các yêu cầu cho việc chế tạo và kiểm tra một chi tiết là bản vẽ nào?
+answer1: Bản vẽ cơ khí
+answer2: Bản vẽ chi tiết
+answer3: Bản vẽ xây dựng
+answer4: Bản vẽ lắp
+Key: 2
+
+Ask23: Xác định trình tự đúng để lập bản vẽ chi tiết?
+answer1: 1-2-3-4
+answer2: 3-4-1-2
+answer3: 3-2-4-1
+answer4: 4-3-2-1
+Key: 2
+
+Ask24: Bố trí các hình biểu diễn bằng các đường trục, đường bao là bước nào khi lập bản vẽ chi tiết?
+answer1: Vẽ mờ
+answer2: Tô đậm
+answer3: Bố trí các hình biểu diễn
+answer4: Hoàn thiện bản vẽ
+Key: 3
+
+Ask25: Bảng kê trong bản vẽ lắp thể hiện nội dung gì?
+answer1: Tên gọi hình chiếu, hình cắt
+answer2: Số thứ tự, tên gọi, số lượng chi tiết, vật liệu
+answer3: Tên gọi sản phẩm
+answer4: Trình tự tháo lắp sản phẩm
+Key: 2
+
+Ask26: Bản vẽ lắp dùng để làm gì?
+answer1: Lắp ráp chi tiết
+answer2: Lắp ráp và kiểm tra sản phẩm
+answer3: Kiểm tra chi tiết
+answer4: Chế tạo và kiểm tra chi tiết
+Key: 2
+
+Ask27: Bản vẽ lắp thể hiện nội dung gì?
+answer1: Hình dạng, kích thước, vị trí của chi tiết
+answer2: Hình dạng, kích thước, vật liệu, yêu cầu kĩ thuật của chi tiết
+answer3: Hình dạng, vị trí, yêu cầu kĩ thuật của chi tiết
+answer4: Hình dạng, vị trí, quan hệ lắp giữa các chi tiết
+Key: 4
+
+Ask28: Khung tên trong bản vẽ lắp thể hiện nội dung gì?
+answer1: Số thứ tự, tên gọi, số lượng chi tiết, vật liệu
+answer2: Tên gọi hình chiếu, hình cắt
+answer3: Tên sản phẩm, tỉ lệ, cơ sở thiết kế
+answer4: Trình tự tháo lắp sản phẩm
+Key: 3
+
+Ask29: Một bản vẽ lắp gồm những nội dung gì?
+answer1: Hình biểu diễn, bảng kê, yêu cầu kĩ thuật, khung tên
+answer2: Hình biểu diễn, kích thước, bảng kê, khung tên
+answer3: Hình biểu diễn, kích thước, yêu cầu kĩ thuật, khung tên
+answer4: Hình biểu diễn, bảng kê, kích thước, yêu cầu kĩ thuật
+Key: 2
+
+Ask30: Bản vẽ nào cho biết hình dạng, vị trí, quan hệ lắp ghép giữa các chi tiết?
+answer1: Bản vẽ cơ khí
+answer2: Bản vẽ chi tiết
+answer3: Bản vẽ xây dựng
+answer4: Bản vẽ lắp
+Key: 4
+
+Ask31: Trình tự đúng để đọc bản vẽ lắp?
+answer1: 4-3-2-1-5
+answer2: 5-2-4-3-1
+answer3: 2-3-1-5-4
+answer4: 1-2-3-4-5
+Key: 2
+
+Ask32: Kích thước trong bản vẽ lắp thể hiện nội dung gì?
+answer1: Kích thước chung và kích thước của tất cả các chi tiết
+answer2: Kích thước của từng chi tiết và kích thước lắp ghép của các chi tiết
+answer3: Kích thước chung và kích thước lắp ghép của các chi tiết
+answer4: Kích thước chung và kích thước từng bộ phận của chi tiết
+Key: 3
+
+Ask33: Bản vẽ mặt bằng của ngôi nhà là bản vẽ gì?
+answer1: Hình chiếu cạnh biểu diễn mặt ngoài của ngôi nhà
+answer2: Hình cắt bằng của các tầng với mặt phẳng cắt ngang cách sàn khoảng 1,5m
+answer3: Hình cắt bằng của các tầng với mặt phẳng cắt ngang cách sàn khoảng 1m
+answer4: Hình cắt của ngôi nhà khi dùng mặt phẳng cắt song song với mặt phẳng chiếu đứng
+Key: 2
+
+Ask34: Để biểu diễn các bộ phận và kích thước của ngôi nhà theo chiều cao thường dùng bản vẽ nào?
+answer1: Mặt bằng tổng thể
+answer2: Mặt đứng
+answer3: Mặt cắt
+answer4: Mặt bằng
+Key: 3
+
+Ask35: Bản vẽ nhà KHÔNG gồm những bản vẽ nào sau đây?
+answer1: Bản vẽ mặt bằng tổng thể
+answer2: Bản vẽ mặt đứng, mặt bằng, mặt cắt của ngôi nhà
+answer3: Bản vẽ chi tiết kết cấu của ngôi nhà
+answer4: Bản vẽ hình chiếu trục đo của ngôi nhà
+Key: 4
+
+Ask36: Để biểu diễn các kích thước dài, rộng của ngôi nhà và của từng phòng thường dùng bản vẽ nào?
+answer1: Mặt đứng
+answer2: Mặt cắt
+answer3: Mặt bằng
+answer4: Mặt bằng tổng thể
+Key: 3
+
+Ask37: Để định hướng cho ngôi nhà, trên bản vẽ nhà thường có mũi tên chỉ hướng nào?
+answer1: Bắc
+answer2: Tây
+answer3: Đông
+answer4: Nam
+Key: 1
+
+Ask38: Để biểu diễn vẻ đẹp kiến trúc và kết cấu chính của ngôi nhà thường dùng bản vẽ nào?
+answer1: Mặt bằng
+answer2: Mặt bằng tổng thể
+answer3: Mặt đứng
+answer4: Mặt cắt
+Key: 3
+
+Ask39: Bản vẽ xây dựng thể hiện nội dung gì?
+answer1: Bản vẽ thiết kế các máy móc, thiết bị
+answer2: Bản vẽ lắp các máy móc, thiết bị
+answer3: Bản vẽ các công trình xây dựng như nhà ở, cầu đường, khu công nghiệp
+answer4: Chi tiết hiện vật nhà ở
+Key: 3
+
+Ask40: Bản vẽ mặt đứng của ngôi nhà là bản vẽ gì?
+answer1: Hình chiếu đứng biểu diễn mặt ngoài của ngôi nhà
+answer2: Hình cắt đứng của ngôi nhà
+answer3: Hình cắt bằng các tầng của ngôi nhà
+answer4: Hình chiếu bằng của ngôi nhà
+Key: 1
+
+Ask41: Bản vẽ mặt bằng tổng thể là bản vẽ gì?
+answer1: Hình chiếu đứng của các công trình trên khu đất xây dựng
+answer2: Hình chiếu bằng của các công trình trên khu đất xây dựng
+answer3: Hình chiếu cạnh của các công trình trên khu đất xây dựng
+answer4: Hình chiếu phối cảnh của các công trình trên khu đất xây dựng
+Key: 2
+
+Ask42: Bản vẽ nhà thể hiện những nội dung gì?
+answer1: Chỉ thể hiện kích thước của ngôi nhà
+answer2: Chỉ thể hiện cấu tạo của ngôi nhà
+answer3: Cấu tạo, hình dáng, kích thước của ngôi nhà
+answer4: Chỉ thể hiện hình dáng của ngôi nhà
+Key: 3
+
+Ask43: Bản vẽ mặt cắt của ngôi nhà là bản vẽ gì?
+answer1: Hình cắt song song với mặt phẳng chiếu bằng
+answer2: Hình chiếu đứng biểu diễn mặt ngoài
+answer3: Hình chiếu cạnh biểu diễn mặt ngoài
+answer4: Hình cắt song song với mặt phẳng chiếu đứng hay mặt phẳng chiếu cạnh
+Key: 4
+
+Ask44: Trên bản vẽ mặt bằng tổng thể KHÔNG thể hiện nội dung nào?
+answer1: Vị trí, hướng của ngôi nhà
+answer2: Kích thước khu đất và ngôi nhà sắp xây
+answer3: Kiến trúc nội thất của ngôi nhà
+answer4: Kiến trúc xung quanh hiện có
+Key: 3
+
+Ask45: Đánh giá các ý kiến sau về hình biểu diễn ren lỗ (Câu 25):
+answer1: a) Đây là hình biểu diễn ren trục
+answer2: b) (1) là đường đỉnh ren
+answer3: c) (2) là đường giới hạn ren
+answer4: d) (5) là vòng chân ren
+Key: 0,0,1,1
+
+Ask46: Tiếp tục đánh giá các ý kiến về ren lỗ (Câu 25):
+answer1: e) Đây là hình biểu diễn ren lỗ
+answer2: f) (2) là đường đỉnh ren
+answer3: g) (3) là đường chân ren
+answer4: h) (4) là vòng đỉnh ren
+Key: 1,0,0,1
+
+Ask47: Đánh giá các ý kiến về hình biểu diễn ren trục (Câu 26):
+answer1: a) Đây là hình biểu diễn ren trong
+answer2: b) (1) là đường chân ren
+answer3: c) (2) là đường giới hạn ren
+answer4: d) (4) là vòng đỉnh ren
+Key: 0,0,1,1
+
+Ask48: Tiếp tục đánh giá các ý kiến về ren trục (Câu 26):
+answer1: e) (3) là đường chân ren
+answer2: f) (5) là vòng đỉnh ren
+answer3: g) Đây là hình biểu diễn ren trục
+answer4: h) (1) là đường đỉnh ren (Bổ sung ý đúng)
+Key: 1,0,1,1
+
+Ask49: Đánh giá bản vẽ kĩ thuật Giá đỡ (Câu 27):
+answer1: a. Bản vẽ này được gọi là bản vẽ lắp
+answer2: b. Tên của sản phẩm trên bản vẽ là GIÁ ĐỠ
+answer3: c. Hình biểu diễn thể hiện ba hình chiếu vuông góc
+answer4: d. Hình cắt thể hiện trên hình chiếu bằng
+Key: 0,1,1,0
+
+Ask50: Đánh giá bản vẽ kĩ thuật (Câu 28):
+answer1: a. Hình cắt của chi tiết là hình cắt toàn bộ
+answer2: b. Yêu cầu về xử lí bề mặt là làm tù cạnh
+answer3: c. Hình cắt A-A thể hiện rõ 2 lỗ Ø12
+answer4: d. Tỉ lệ của bản vẽ là 1:2
+Key: 1,1,0,1
+
+Ask51: Đánh giá bản vẽ kĩ thuật (Câu 29):
+answer1: a. Bản vẽ này được gọi là bản vẽ chi tiết
+answer2: b. Vật liệu chế tạo chi tiết là THÉP
+answer3: c. Yêu cầu về gia công là mạ kẽm
+answer4: d. Hình cắt thể hiện trên hình chiếu đứng và cạnh
+Key: 1,1,0,1
+
+Ask52: Đánh giá bản vẽ kĩ thuật (Câu 30):
+answer1: A. Hình cắt chi tiết là hình cắt bán phần
+answer2: B. Kích thước chung là 100x100x100mm
+answer3: C. Yêu cầu xử lí bề mặt là mạ kẽm
+answer4: D. Hình cắt B-B thể hiện rõ 2 lỗ Ø12
+Key: 0,1,1,1
+
+Ask53: Đánh giá bản vẽ mặt bằng nhà (Câu 21):
+answer1: a) Đây là mặt bằng tầng hai của nhà nhiều tầng
+answer2: b) Chiều rộng phòng khách xấp xỉ 4,5m
+answer3: c) Cửa đi đều là loại đơn 1 cánh
+answer4: d) Phòng bếp có 2 cửa sổ
+Key: 0,1,0,1
+
+Ask54: Tiếp tục đánh giá bản vẽ nhà (Câu 21):
+answer1: e) Đây là mặt bằng tầng một của nhà nhiều tầng
+answer2: f) Cửa thông các phòng đều bằng nhau
+answer3: g) Có một phòng kho
+answer4: h) Cửa sổ phòng ngủ rộng 1,3m
+Key: 1,0,1,1
+
+Ask55: Tiếp tục đánh giá bản vẽ nhà (Câu 21):
+answer1: i) Đây là bản vẽ của ngôi nhà chỉ có một tầng
+answer2: j) Chiều rộng ngôi nhà xấp xỉ 7m
+answer3: k) Cửa đi là loại cửa đơn 2 cánh
+answer4: l) Phòng ngủ có 1 giường và 2 tủ quần áo
+Key: 0,1,1,0
