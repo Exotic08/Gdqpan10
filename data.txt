@@ -66,7 +66,7 @@ answer1: Tây Sơn.
 answer2: Lê Sơ.
 answer3: Tiền Lý.
 answer4: Tiền Lê.
-Key: 1
+Key: 3
 
 Ask11: Bộ luật thành văn đầu tiên của Đại Việt là:
 answer1: Hình thư.
