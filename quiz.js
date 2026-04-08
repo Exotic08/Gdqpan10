@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==========================================
-    // CHẤM ĐIỂM & ĐẨY LÊN BẢNG XẾP HẠNG
+    // CHẤM ĐIỂM & ĐẨY LÊN BẢNG XẾP HẠNG (THUẬT TOÁN MỚI)
     // ==========================================
     quizForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showSection('result');
         window.scrollTo(0, 0);
 
-        // GỬI DỮ LIỆU LÊN FIREBASE
+        // --- BẮT ĐẦU: LƯU LÊN BẢNG XẾP HẠNG VỚI CƠ CHẾ LỌC ---
         const record = {
             name: userName,
             correct: correctCount,
@@ -302,12 +302,54 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            await fetch(`${FIREBASE_BASE_URL}/leaderboard_${currentQuiz.id}.json`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(record)
-            });
+            const dbUrl = `${FIREBASE_BASE_URL}/leaderboard_${currentQuiz.id}.json`;
+            
+            // 1. Tải BXH hiện tại về để kiểm tra
+            const res = await fetch(dbUrl);
+            const data = await res.json();
+            
+            let existingKey = null;
+            let shouldUpdate = true; // Cờ quyết định có lưu hay không
+
+            if (data) {
+                // Duyệt qua tất cả người chơi trong DB
+                for (const [key, val] of Object.entries(data)) {
+                    // So sánh tên (đưa về chữ thường để tránh sai sót do in hoa/in thường)
+                    if (val.name.trim().toLowerCase() === userName.trim().toLowerCase()) {
+                        existingKey = key; // Đã tìm thấy tài khoản cũ
+                        
+                        // Kiểm tra xem kết quả mới có TỐT HƠN kết quả cũ không
+                        if (record.correct < val.correct) {
+                            shouldUpdate = false; // Điểm thấp hơn -> Không lưu
+                        } else if (record.correct === val.correct && record.timeMs >= val.timeMs) {
+                            shouldUpdate = false; // Điểm bằng nhưng thời gian lâu hơn -> Không lưu
+                        }
+                        break; // Tìm thấy người này rồi thì thoát vòng lặp
+                    }
+                }
+            }
+
+            // Thực hiện ghi dữ liệu nếu thỏa điều kiện
+            if (shouldUpdate) {
+                if (existingKey) {
+                    // Nếu đã có tên -> Ghi đè (Cập nhật) thành tích mới vào dòng của người đó
+                    await fetch(`${FIREBASE_BASE_URL}/leaderboard_${currentQuiz.id}/${existingKey}.json`, {
+                        method: 'PATCH',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(record)
+                    });
+                } else {
+                    // Nếu chưa có tên -> Tạo mới một dòng
+                    await fetch(dbUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(record)
+                    });
+                }
+            }
+
         } catch (error) { console.error("Lỗi lưu BXH", error); }
+        // --- KẾT THÚC LƯU BXH ---
     }
 
     function buildReviewItem(q, qIndex, isCorrect, formData) {
@@ -395,14 +437,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return str.replace(/[&<>'"]/g, tag => ({'&': '&amp;','<': '&lt;','>': '&gt;',"'": '&#39;','"': '&quot;'}[tag] || tag));
     }
 
-    // ==========================================
-    // GẮN SỰ KIỆN CÁC NÚT BẤM (ĐÃ SỬA LỖI Ở ĐÂY)
-    // ==========================================
+    // Gắn sự kiện nút bấm
     document.getElementById('retake-btn').addEventListener('click', () => {
         selectQuiz(currentQuiz); 
     });
 
-    // Sự kiện cho nút Xem Bảng Xếp Hạng ở trang kết quả
     document.getElementById('view-leaderboard-btn').addEventListener('click', () => {
         window.loadLeaderboard(currentQuiz.id, currentQuiz.title);
     });
