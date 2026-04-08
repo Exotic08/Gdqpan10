@@ -163,7 +163,7 @@ answer2: little
 answer3: much
 answer4: another
 Key: 1
-Ask33: [Bài đọc 2] What is the main idea of the passage?
+Ask33: [Countries around the world have growing mountains of trash because people are throwing out more trash than ever before... First of all, it is now easier to replace an item than to spend time and money to repair it... Products are plentiful and prices are low... Another contributing factor is our love of disposable products... paper plates, plastic cups... We are addicted to buying things... Advertisements persuade us wer is better...] What is the main idea of the passage?
 answer1: How did we become a throwaway society?
 answer2: How to solve plentiful products
 answer3: How to solve disposable products
