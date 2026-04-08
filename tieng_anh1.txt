@@ -1,0 +1,195 @@
+Ask1: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: bond
+answer2: homemaker
+answer3: comment
+answer4: consequence
+Key: 2
+Ask2: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: device
+answer2: intelligence
+answer3: focus
+answer4: processor
+Key: 2
+Ask3: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: messaged
+answer2: received
+answer3: showed
+answer4: painted
+Key: 4
+Ask4: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: organic
+answer2: physical
+answer3: essential
+answer4: endangered
+Key: 2
+Ask5: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: major
+answer2: female
+answer3: police
+answer4: famous
+Key: 3
+Ask6: ________ helps to preserve the natural environment.
+answer1: Mass tourism
+answer2: Ecotourism
+answer3: deforestation
+answer4: global warming
+Key: 2
+Ask7: UNICEF aims to protect children and ________ make sure they are safe and healthy.
+answer1: pay
+answer2: make
+answer3: get
+answer4: take
+Key: 2
+Ask8: All children are warmly ________ to join the project as its aim is to help young learners in the community.
+answer1: ask
+answer2: invite
+answer3: made
+answer4: welcomed
+Key: 4
+Ask9: Quang Ninh museum is a major ________ attraction in our city.
+answer1: tourism
+answer2: tourist
+answer3: tourists
+answer4: tour
+Key: 2
+Ask10: In the age of technology, you can ________ use of new applications which are very useful for learning English.
+answer1: make
+answer2: take
+answer3: get
+answer4: have
+Key: 1
+Ask11: Hunting should be banned as it will damage and make a bad ________ on the environment.
+answer1: impact
+answer2: result
+answer3: control
+answer4: distraction
+Key: 1
+Ask12: Girls with good education can ________ the opportunity to have a better life in the future.
+answer1: be given
+answer2: have been given
+answer3: gives
+answer4: have given
+Key: 1
+Ask13: Nancy told me that she ________ her assignment the day before.
+answer1: was finishing
+answer2: has finished
+answer3: finished
+answer4: had finished
+Key: 4
+Ask14: European markets are usually ________ than Asian markets.
+answer1: more competitive
+answer2: the more competitive
+answer3: competitive
+answer4: most competitive
+Key: 1
+Ask15: Animals will take more time to flee from danger if they ________ in cities.
+answer1: will
+answer2: could live
+answer3: would live
+answer4: live
+Key: 4
+Ask16: If there ________ more than 24 hours a day, I would spend more time on my habits.
+answer1: is
+answer2: were
+answer3: had been
+answer4: would be
+Key: 2
+Ask17: Student social life revolves around the Student Union, ________ is the yellow building opposite the library.
+answer1: who
+answer2: which
+answer3: that
+answer4: it
+Key: 2
+Ask18: We ________ the Statue of Liberty while we ________ our vacation in New York.
+answer1: visited/ spent
+answer2: visited/ were spending
+answer3: have visited/ spent
+answer4: visit/spend
+Key: 2
+Ask19: Chia từ trong ngoặc (CELEBRATION): The parents of the groom go to the fortune teller to see what date and time is best for them to ________ the wedding ceremony.
+Type: short
+Key: celebrate
+Ask20: Chia từ trong ngoặc (TRADITION): ________ the reception occurs at their houses, but now many families hold wedding parties at the restaurant.
+Type: short
+Key: Traditionally
+Ask21: Chia từ trong ngoặc (EFFECT): American teenagers send an average of 60 text messages per day, making this an ________ way in communication.
+Type: short
+Key: effective
+Ask22: Chia từ trong ngoặc (INVEST): Our economy will develop faster if we can attract more ________.
+Type: short
+Key: investments
+Ask23: Viết lại câu sao cho nghĩa không đổi: "They will construct some new airports on islands."
+Type: short
+Key: Some new airports will be constructed on islands.
+Ask24: Viết lại câu sao cho nghĩa không đổi: "No restaurant in the city is better than that one."
+Type: short
+Key: That restaurant is the best in the city.
+Ask25: Viết lại câu sao cho nghĩa không đổi: Mr. Smith said to me, "Where are you going on your vacation?"
+Type: short
+Key: Mr. Smith asked me where I was going on my vacation.
+Ask26: Viết lại câu sao cho nghĩa không đổi (dùng When): "The storm started. The students was having a test."
+Type: short
+Key: When the students were having a test, the storm started.
+Ask27: Viết lại câu dùng mệnh đề quan hệ: "The man is a famous actor. You met him at the party last night."
+Type: short
+Key: The man whom you met at the party last night is a famous actor.
+Ask28: [If you find yourself learn better by making notes during the lecture... you are very likely to be a more visual learner. You prefer to see the written words... Visual learners often think in pictures. If you find a particular task or text difficult, look for sources (1)______ will suit your learning style... If you prefer recording the lecture (2)______ listening again to taking (3), or you (4)___ something by repeating it aloud instead of writing it out a (5)_____ times, you are probably a more auditory learner...] Điền từ vào chỗ trống (1): ...look for sources (1) ________ will suit your learning style...
+answer1: that
+answer2: who
+answer3: whom
+answer4: whose
+Key: 1
+Ask29: [Bài đọc 1] Điền từ vào chỗ trống (2): If you prefer recording the lecture (2) ________ listening again to taking...
+answer1: besides
+answer2: and
+answer3: but
+answer4: however
+Key: 2
+Ask30: [Bài đọc 1] Điền từ vào chỗ trống (3): ...listening again to taking (3) ________...
+answer1: advantages
+answer2: parts
+answer3: courses
+answer4: notes
+Key: 4
+Ask31: [Bài đọc 1] Điền từ vào chỗ trống (4): ...or you (4) ________ something by repeating it aloud...
+answer1: memorably
+answer2: memorable
+answer3: memorize
+answer4: memory
+Key: 3
+Ask32: [Bài đọc 1] Điền từ vào chỗ trống (5): ...instead of writing it out a (5) ________ times...
+answer1: few
+answer2: little
+answer3: much
+answer4: another
+Key: 1
+Ask33: [Bài đọc 2] What is the main idea of the passage?
+answer1: How did we become a throwaway society?
+answer2: How to solve plentiful products
+answer3: How to solve disposable products
+answer4: Our appetite for new products
+Key: 1
+Ask34: [Bài đọc 2] All of the following are disposable products, EXCEPT:
+answer1: cloth kitchen towels
+answer2: paper plates
+answer3: plastic cups
+answer4: razors for shaving
+Key: 1
+Ask35: [Bài đọc 2] The word "disposable" in paragraph 3 is closest in meaning to:
+answer1: convenient
+answer2: inexpensive
+answer3: throwaway
+answer4: single-use
+Key: 3
+Ask36: [Bài đọc 2] Why are we hooked on buying new things?
+answer1: We throw the old items to make room for the new ones.
+answer2: We have more money than ever before.
+answer3: We want to own as many things as possible.
+answer4: We are made to believe that the new is the better.
+Key: 4
+Ask37: [Bài đọc 2] The word "them" in paragraph 2 refers to:
+answer1: these items
+answer2: new ones
+answer3: chips
+answer4: products
+Key: 1
