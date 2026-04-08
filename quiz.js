@@ -395,9 +395,16 @@ document.addEventListener("DOMContentLoaded", () => {
         return str.replace(/[&<>'"]/g, tag => ({'&': '&amp;','<': '&lt;','>': '&gt;',"'": '&#39;','"': '&quot;'}[tag] || tag));
     }
 
-    // Gắn sự kiện nút bấm
+    // ==========================================
+    // GẮN SỰ KIỆN CÁC NÚT BẤM (ĐÃ SỬA LỖI Ở ĐÂY)
+    // ==========================================
     document.getElementById('retake-btn').addEventListener('click', () => {
         selectQuiz(currentQuiz); 
+    });
+
+    // Sự kiện cho nút Xem Bảng Xếp Hạng ở trang kết quả
+    document.getElementById('view-leaderboard-btn').addEventListener('click', () => {
+        window.loadLeaderboard(currentQuiz.id, currentQuiz.title);
     });
 
     homeBtn.addEventListener('click', () => {
