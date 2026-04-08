@@ -1,5 +1,5 @@
 /**
- * EdTech Quiz - Nâng cấp: Tên người dùng & Bảng xếp hạng & Kiểm soát Quảng cáo
+ * EdTech Quiz - Tên người dùng & Bảng xếp hạng (Không Quảng Cáo)
  */
 
 // ==========================================
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==========================================
-    // ĐIỀU HƯỚNG GIAO DIỆN & LOGIC QUẢNG CÁO
+    // ĐIỀU HƯỚNG GIAO DIỆN
     // ==========================================
     function showSection(sectionId) {
         // Ẩn tất cả
@@ -120,13 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Hiện section được yêu cầu
         const target = document.getElementById(`${sectionId}-section`);
         if (target) target.classList.remove('hidden');
-
-        // LOGIC ẨN QUẢNG CÁO SOCIAL BAR LÚC THI (RẤT QUAN TRỌNG)
-        if (sectionId === 'quiz') {
-            document.body.classList.add('is-quizzing'); // CSS sẽ can thiệp ẩn quảng cáo đi
-        } else {
-            document.body.classList.remove('is-quizzing'); // Hiện lại quảng cáo ở Sảnh, BXH, Kết quả
-        }
     }
 
     // ==========================================
