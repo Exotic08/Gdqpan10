@@ -1,0 +1,220 @@
+
+Ask1: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: decided
+answer2: wanted
+answer3: mended
+answer4: played
+Key: 4
+​Ask2: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: access
+answer2: affect
+answer3: application
+answer4: fact
+Key: 2
+​Ask3: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: public
+answer2: brochure
+answer3: understand
+answer4: culture
+Key: 2
+​Ask4: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: conflict
+answer2: married
+answer3: aware
+answer4: alone
+Key: 2
+​Ask5: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
+answer1: reduction
+answer2: popular
+answer3: financial
+answer4: romantic
+Key: 2
+​Ask6: Letting students use their own digital devices in class can improve the ________ experience in many ways.
+answer1: educated
+answer2: educational
+answer3: uneducated
+answer4: educator
+Key: 2
+​Ask7: Áo dài used to be worn only on special ________, but it has recently become a popular choice for everyday wear.
+answer1: occasions
+answer2: manners
+answer3: specialties
+answer4: norms
+Key: 1
+​Ask8: For the cultural festival at school, I brought "Bánh đậu xanh", a ________ in Hải Dương.
+answer1: speciality
+answer2: tradition
+answer3: monument
+answer4: wonder
+Key: 1
+​Ask9: She always impressed others with her polished ________ at social gatherings.
+answer1: manners
+answer2: norms
+answer3: specialties
+answer4: occasions
+Key: 1
+​Ask10: In order to join international trades, we need to ________ our products widely.
+answer1: promation
+answer2: promote
+answer3: promotional
+answer4: promer
+Key: 2
+​Ask11: For the cultural festival at school, I brought "Bánh đậu xanh", a ________ in Hải Dương.
+answer1: speciality
+answer2: tradition
+answer3: monument
+answer4: wonder
+Key: 1
+​Ask12: J.K. Rowling's first book ________ when she was only 6 years old.
+answer1: wrote
+answer2: is written
+answer3: was written
+answer4: is writting
+Key: 3
+​Ask13: The whole chocolate cake ________ by my sister last evening because she was too hungry.
+answer1: were eaten
+answer2: being eaten
+answer3: have eaten
+answer4: was eaten
+Key: 4
+​Ask14: We ________ Niagara Falls while we ________ our summer holiday in America.
+answer1: have visited/ spent
+answer2: visited/ were spending
+answer3: visit/spend
+answer4: visited/ spent
+Key: 2
+​Ask15: The town was nearer ________ we thought it would be.
+answer1: then
+answer2: that
+answer3: as
+answer4: than
+Key: 4
+​Ask16: The flower bouquet was much ________ when it was delivered on Tuesday.
+answer1: beautiful
+answer2: more beautiful
+answer3: the prettiest
+answer4: more pretty
+Key: 2
+​Ask17: His best movie, ________ won several awards, was about the life of Gandhi.
+answer1: who
+answer2: that
+answer3: whose
+answer4: which
+Key: 4
+​Ask18: I walked in when she ________ alone in the room.
+answer1: was crying
+answer2: is crying
+answer3: cried
+answer4: has cried
+Key: 1
+​Ask19: Chia từ trong ngoặc (INFORM): Laptops and wireless technologies allow students to access ________ relevant to class topics immediately.
+Type: short
+Key: information
+​Ask20: Chia từ trong ngoặc (CRITIC): By allowing our students to use digital devices in class, we are creating an opportunity to teach them to think ________.
+Type: short
+Key: critically
+​Ask21: Chia từ trong ngoặc (EDUCATION): Digital devices offer an opportunity to ________ students about technology use in their education and life.
+Type: short
+Key: educate
+​Ask22: Chia từ trong ngoặc (PARTICIPATE): Viet Nam has become an active ________ in the international community.
+Type: short
+Key: participant
+​Ask23: Viết lại câu (dùng While): "He called me. I was taking a shower in the bathroom."
+Type: short
+Key: While I was taking a shower in the bathroom, he called me.
+​Ask24: Viết lại câu dùng mệnh đề quan hệ: "The bike was too expensive. He wanted to buy it."
+Type: short
+Key: The bike which he wanted to buy was too expensive.
+​Ask25: Viết lại câu bị động: "They will catch all the prisoners again tonight."
+Type: short
+Key: All the prisoners will be caught again tonight.
+​Ask26: Viết lại câu so sánh: "She is taller than her sister."
+Type: short
+Key: Her sister is shorter than her.
+​Ask27: Viết lại câu điều kiện: "We can't get the ticket because I don't have the right change."
+Type: short
+Key: If I had the right change, we could get the ticket.
+​Ask28: [Few people now question the reality of global warming and its effects on the world's
+climate. Many scientists (1) ______ the blame for recent natural disasters on the increase in the
+world's temperature and are convinced that, more than ever before, the Earth is (2) ______ risk
+from the forces of the wind, rain and sun. According to them, global warming is making extreme
+weather events, such as hurricanes and droughts, even more environmental and (3) ______
+sea levels all around the world to rise. Severe groups are putting pressure on governments to
+take action to reduce the amount of carbon dioxide (4) ______ is given off by factories and
+power plants, thus attacking the problem at its source. They are in favor of more money being
+spent on research into solar, wind and wave energy devices, which could then replace existing
+power station. Some scientists, (5) ______, believe that even if we stopped releasing carbon
+dioxide and other gases into the atmosphere tomorrow, we would have to wait several hundred
+years to notice the results. Global warming, it seems, is to stay.] Điền từ vào chỗ trống (1): Many scientists (1) ________ the blame for recent natural disasters...
+answer1: give
+answer2: put
+answer3: take
+answer4: have
+Key: 2
+​Ask29: [Bài đọc 1] Điền từ vào chỗ trống (2): ...the Earth is (2) ________ risk from the forces of the wind, rain and sun.
+answer1: in
+answer2: on
+answer3: be
+answer4: at
+Key: 4
+​Ask30: [Bài đọc 1] Điền từ vào chỗ trống (3): ...such as hurricanes and droughts, even more environmental and (3) ________ sea levels all around the world to rise.
+answer1: taking
+answer2: putting
+answer3: causing
+answer4: doing
+Key: 3
+​Ask31: [Bài đọc 1] Điền từ vào chỗ trống (4): ...reduce the amount of carbon dioxide (4) ________ is given off by factories and power plants...
+answer1: who
+answer2: which
+answer3: what
+answer4: who
+Key: 2
+​Ask32: [Bài đọc 1] Điền từ vào chỗ trống (5): Some scientists, (5) ________, believe that even if we stopped releasing carbon dioxide...
+answer1: but
+answer2: although
+answer3: despite
+answer4: however
+Key: 4
+​Ask33: [Conservation conflicts arise when natural-resource shortages develop in the face of
+steadily increasing demands from a growing human population. Controversy frequently
+surrounds how a resource should be used, or allocated, and for whom. For example, a river
+may supply water for agricultural irrigation, habitat for fish, and water-generated electricity for a
+factory. Farmers, fishers, and industry leader vie for unrestricted access to this river, but such
+freedom could destroy the resource, and conservation methods are necessary to protect the
+river for future use. Conflicts worsen when a natural resource crosses political boundaries. For
+example, the headwaters, or source, of a major river may be located in a different country than
+the country through which the river flows. There is no guarantee that the river source will be
+protected to accommodate resource needs downstream. In addition, the way in which one
+natural resource is managed has a direct effect upon other natural resources. Cutting down a
+forest near a river, for instance, increases erosion, the wearing away of topsoil, and can lead to
+flooding. Eroded soil and silt cloud the river and adversely affect many organisms such as fish
+and important aquatic plants that require clean, clear freshwater for survival.] What does "supply" in line 3 mean?
+answer1: cover
+answer2: provide
+answer3: make up for
+answer4: compensate for
+Key: 2
+​Ask34: [Bài đọc 2] Which word in the reading means "living or growing in, or relating to water"?
+answer1: agriculture
+answer2: major
+answer3: fresh
+answer4: aquatic
+Key: 4
+​Ask35: [Bài đọc 2] When do conflicts get worse?
+answer1: when natural-resource shortages increase in the features of gradually increasing demands...
+answer2: when a natural resource crosses political borders
+answer3: when freedom could destroy the resource.
+answer4: when eroded soil and silt cloud affect many organisms.
+Key: 2
+​Ask36: [Bài đọc 2] Which sentence below is NOT correct?
+answer1: Argument often surrounds how a resource should be used, or allocated, and for whom.
+answer2: A river may provide water for agricultural irrigation, habitat for fish, and water-generated electricity for a factory
+answer3: Conservation methods are incidental to care for the river for future use.
+answer4: Farmers, fishers and industry leaders vie for open access to this river.
+Key: 3
+​Ask37: [Bài đọc 2] What is the passage above mainly about?
+answer1: Conservation conflicts
+answer2: Agricultural irrigation
+answer3: The headwaters of a major river
+answer4: Natural-resource shortages
+Key: 1
