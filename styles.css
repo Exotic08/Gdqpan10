@@ -20,12 +20,13 @@
 body { font-family: var(--font-family); background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
 .app-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 
-/* Header */
+/* Header & Avatar */
 .app-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid var(--border-color); flex-wrap: wrap; gap: 15px; }
 .header-title-group { display: flex; align-items: center; gap: 15px; }
 .app-header h1 { font-size: 1.5rem; color: var(--text-main); }
 .header-controls { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
-.user-profile { background: #f1f5f9; padding: 8px 15px; border-radius: 20px; font-weight: 600; display: flex; gap: 10px; align-items: center; border: 1px solid var(--border-color); }
+.user-profile { background: #f1f5f9; padding: 6px 15px; border-radius: 25px; font-weight: 600; display: flex; gap: 10px; align-items: center; border: 1px solid var(--border-color); }
+.header-avatar { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; background: #e2e8f0; }
 .btn-text { background: none; border: none; color: var(--primary-color); cursor: pointer; font-size: 0.85rem; font-weight: bold; text-decoration: underline; }
 
 .btn-icon { background: #e2e8f0; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-weight: bold; color: var(--text-main); transition: 0.2s; }
@@ -34,6 +35,12 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
 
 .section { background: var(--container-bg); border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
 .hidden { display: none !important; }
+
+/* AVATAR SELECTOR (LÚC ĐĂNG NHẬP) */
+.avatar-selector { display: flex; justify-content: center; gap: 12px; margin: 15px 0 25px 0; flex-wrap: wrap; }
+.avatar-option { width: 55px; height: 55px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: all 0.2s; background: #f1f5f9; padding: 2px; }
+.avatar-option:hover { transform: scale(1.1); }
+.avatar-option.selected { border-color: var(--primary-color); transform: scale(1.15); box-shadow: 0 0 15px rgba(37,99,235,0.4); background: #dbeafe; }
 
 /* Màn hình Đăng nhập */
 .login-box { max-width: 500px; margin: 0 auto; text-align: center; }
@@ -56,7 +63,6 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
 .images-container { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
 .question-image { max-width: 100%; max-height: 450px; border-radius: 8px; border: 1px solid var(--border-color); object-fit: contain; }
 .review-image { max-width: 200px; margin: 10px 0; border-radius: 6px; border: 1px solid var(--border-color); }
-
 .options-group { display: flex; flex-direction: column; gap: 10px; }
 .option-label { display: flex; align-items: center; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 8px; cursor: pointer; transition: 0.2s; }
 .option-label:hover { background: #f1f5f9; }
@@ -77,7 +83,6 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
 .stat-box { flex: 1; min-width: 120px; background: #f8fafc; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid var(--border-color); }
 .stat-label { display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 5px; }
 .stat-value { display: block; font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
-
 .review-item { margin-bottom: 20px; padding: 20px; border-radius: 8px; border-left: 5px solid; background: #f8fafc; }
 .review-correct { border-left-color: var(--correct-border); }
 .review-incorrect { border-left-color: var(--incorrect-border); }
@@ -86,17 +91,92 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
 .feedback-correct { color: #16a34a; }
 .feedback-incorrect { color: #dc2626; }
 
-/* BẢNG XẾP HẠNG (Leaderboard) */
+/* BẢNG XẾP HẠNG & HIỆU ỨNG TOP 1 2 3 */
 .table-container { overflow-x: auto; margin-top: 20px; border-radius: 8px; border: 1px solid var(--border-color); }
 .lb-table { width: 100%; border-collapse: collapse; text-align: left; }
-.lb-table th, .lb-table td { padding: 12px 15px; border-bottom: 1px solid var(--border-color); }
+.lb-table th, .lb-table td { padding: 12px 15px; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
 .lb-table th { background-color: #f1f5f9; font-weight: 700; color: var(--text-main); white-space: nowrap; }
 .lb-table tr:last-child td { border-bottom: none; }
 .lb-table tbody tr:hover { background-color: #f8fafc; }
 
-.rank-1 td { font-weight: bold; background-color: #fffbeb !important; }
-.rank-1 td:first-child { color: var(--gold); font-size: 1.2rem; }
-.rank-2 td { font-weight: bold; background-color: #f3f4f6 !important; }
-.rank-2 td:first-child { color: var(--silver); font-size: 1.2rem; }
-.rank-3 td { font-weight: bold; background-color: #fff7ed !important; }
-.rank-3 td:first-child { color: var(--bronze); font-size: 1.2rem; }
+/* UI Cột người chơi (Avatar + Tên) */
+.player-info-container { display: flex; align-items: center; gap: 12px; }
+.avatar-wrapper { position: relative; display: inline-block; }
+.lb-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #e2e8f0; background: #f1f5f9; }
+
+/* CSS Top 1, 2, 3 Background Row */
+.rank-1 td { background-color: #fffdf0 !important; }
+.rank-1 td:first-child { color: var(--gold); font-size: 1.3rem; font-weight: bold; }
+.rank-2 td { background-color: #f8fafc !important; }
+.rank-2 td:first-child { color: var(--silver); font-size: 1.2rem; font-weight: bold; }
+.rank-3 td { background-color: #fffaf5 !important; }
+.rank-3 td:first-child { color: var(--bronze); font-size: 1.2rem; font-weight: bold; }
+
+/* Vương miện lơ lửng Top 1 */
+.crown-icon {
+    position: absolute;
+    top: -14px;
+    left: -12px;
+    font-size: 1.4rem;
+    transform: rotate(-20deg);
+    z-index: 10;
+    animation: floatCrown 2s infinite ease-in-out;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+}
+@keyframes floatCrown {
+    0%, 100% { transform: translateY(0) rotate(-20deg); }
+    50% { transform: translateY(-4px) rotate(-15deg); }
+}
+
+/* Chữ mạ vàng lấp lánh (Top 1) */
+.gold-text {
+    background: linear-gradient(to right, #b48507, #fef08a, #ca8a04, #fef08a, #b48507);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-size: 1.15rem;
+    animation: shine 3s infinite linear;
+    text-shadow: 0px 0px 10px rgba(250, 204, 21, 0.3);
+}
+
+/* Chữ bạc (Top 2) */
+.silver-text {
+    background: linear-gradient(to right, #64748b, #f1f5f9, #94a3b8, #f1f5f9, #64748b);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 1.05rem;
+    animation: shine 3s infinite linear;
+}
+
+/* Chữ đồng (Top 3) */
+.bronze-text {
+    background: linear-gradient(to right, #92400e, #fde68a, #b45309, #fde68a, #92400e);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 1.05rem;
+    animation: shine 3s infinite linear;
+}
+@keyframes shine { to { background-position: 200% center; } }
+
+/* Hạt bụi lấp lánh quanh tên Top 1 */
+.sparkle-box { position: relative; display: inline-block; }
+.sparkle {
+    position: absolute;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 4px #fff, 0 0 8px #fef08a, 0 0 12px #eab308;
+    animation: sparkleAnim 1.5s infinite linear;
+    opacity: 0;
+    z-index: 5;
+}
+@keyframes sparkleAnim {
+    0% { transform: scale(0) rotate(0deg); opacity: 0; }
+    50% { transform: scale(1.2) rotate(180deg); opacity: 1; }
+    100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
