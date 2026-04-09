@@ -160,7 +160,7 @@ Ask27: Viết lại câu dùng mệnh đề quan hệ: "The man is a famous acto
 Type: short
 Key: The man whom you met at the party last night is a famous actor.
 
-Ask28: [Bài đọc 1] Điền từ vào chỗ trống (1): ...look for sources (1) ________ will suit your learning style...
+Ask28: [If you find yourself learn better by making notes during the lecture, or when the teacher uses a new word, you want to see it written immediately, then you are very likely to be a more visual learner. You prefer to see the written words. You learn by reading and writing. Visual learners often think in pictures. If you find a particular task or text difficult, look for sources (1) ______ will suit your learning style, e.g. sources with illustrations, charts, tables, or videos. If you prefer recording the lecture (2) ______ listening again to taking (3) ______, or you (4) ______ something by repeating it aloud instead of writing it out a (5) ______ times, you are probably a more auditory learner. You prefer to learn by listening and speaking. Auditory learners often learn best from lectures, discussions, by reading aloud, and by listening to audio material. However, it is probably that you, like most people, learn through a mixture of styles. Sometimes you may prefer to learn by reading, at other time by listening. Ask yourself which is the best style for the particular task you are doing.] Điền từ vào chỗ trống (1): ...look for sources (1) ________ will suit your learning style...
 answer1: that
 answer2: who
 answer3: whom
@@ -195,7 +195,7 @@ answer3: much
 answer4: another
 Key: 1
 
-Ask33: [Bài đọc 2] What is the main idea of the passage?
+Ask33: [Countries around the world have growing mountains of trash because people are throwing out more trash than ever before. Here are some reasons leading to this problem. First of all, it is now easier to replace an item than to spend time and money to repair it. Thanks to modern manufacturing and technology, companies are able to produce items quickly and inexpensively. Products are plentiful and prices are low, so we would rather buy something new than repair it. Even if we did want to repair something, many items are almost impossible to repair. These products contain many tiny, complicated parts. Some even contain small computer chips. It's easier to throw these items away and buy new ones than to fix them. Another contributing factor is our love of disposable products. As busy people, we are always looking for ways to save time and make our lives easier. Why should we use cloth kitchen towels? It's easier to use paper towel once and toss it out. Companies manufacture thousands of different kinds of disposable items: paper plates, plastic cups, cameras, and razors for shaving, to name a few. The problem is that disposable products also contribute to our trash problem. Our appetite for new products also contributes to the problem. We are addicted to buying things. As consumers, we want the latest clothes, the best TVs, and cellphones with west features. Companies tell us to buy, buy, and buy. Advertisements persuade us wer is better. The result is that we throw away useful possessions to make room for new ones.] What is the main idea of the passage?
 answer1: How did we become a throwaway society?
 answer2: How to solve plentiful products
 answer3: How to solve disposable products
