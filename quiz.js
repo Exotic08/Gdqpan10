@@ -1,5 +1,5 @@
 /**
- * EdTech Quiz - Đồng bộ Chìa khóa, Túi đồ, Gacha phạt Trùng và Sửa lỗi API Ảnh
+ * EdTech Quiz - Đồng bộ Chìa khóa, Túi đồ, Gacha phạt Trùng, Fix API Ảnh và GIFTCODE
  */
 
 const QUIZ_LIST = [
@@ -13,7 +13,6 @@ const FIREBASE_BASE_URL = "https://ontap-59972-default-rtdb.firebaseio.com";
 
 const AVATAR_SEEDS = ['Felix', 'Aneka', 'Nala', 'Oliver', 'Jack', 'Mimi', 'Loki', 'Garfield'];
 
-// FIX: Cập nhật API ảnh lên bản 9.x mới nhất với bộ style chuẩn adventurer để 100% không bị trắng
 const GACHA_POOL = [
     { id: 'mythic-1', type: 'border', name: 'Viền Thần Thoại (Mythic)', chance: 1, class: 'border-mythic', icon: '✨', desc: 'Hiệu ứng cầu vồng lấp lánh cực hiếm (1%)!' },
     { id: 'avatar-dragon', type: 'avatar', name: 'Avatar Rồng Thần', chance: 3, url: 'https://api.dicebear.com/9.x/adventurer/svg?seed=Dragon', icon: '🐉', desc: 'Ảnh đại diện Rồng cơ khí siêu ngầu (3%).' },
@@ -26,17 +25,16 @@ const GACHA_POOL = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    let currentQuiz = null; 
-    let questions = []; 
-    let startTime = null; 
-    let timerInterval = null;
+    let currentQuiz = null; let questions = []; let startTime = null; let timerInterval = null;
     
+    // Khởi tạo state
     let userName = localStorage.getItem('quiz_username') || "";
     let userAvatar = "https://api.dicebear.com/9.x/adventurer/svg?seed=Felix";
     let userBorder = "border-none";
     let userKeys = 0;
     let unlockedAvatars = AVATAR_SEEDS.map(seed => `https://api.dicebear.com/9.x/adventurer/svg?seed=${seed}`);
     let unlockedBorders = ['border-none'];
+    let redeemedCodes = []; // Mảng chứa các code đã nhập
 
     const displayUserAvatar = document.getElementById('display-user-avatar');
     const displayUserName = document.getElementById('display-user-name');
@@ -59,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // --- HÀM ĐỒNG BỘ DỮ LIỆU TỪ FIREBASE ---
     async function syncDataFromFirebase() {
         try {
             const res = await fetch(`${FIREBASE_BASE_URL}/users/${userName.toLowerCase()}.json`);
@@ -68,163 +65,169 @@ document.addEventListener("DOMContentLoaded", () => {
                 userAvatar = fixBrokenAvatarURL(data.avatar || userAvatar);
                 userBorder = data.border || userBorder;
                 userKeys = data.keys || 0;
-                
-                let loadedAvatars = data.unlockedAvatars || unlockedAvatars;
-                // Sửa lỗi các link avatar bị trắng trước đây trong kho đồ của người dùng
-                unlockedAvatars = loadedAvatars.map(url => fixBrokenAvatarURL(url));
+                unlockedAvatars = (data.unlockedAvatars || unlockedAvatars).map(url => fixBrokenAvatarURL(url));
                 unlockedBorders = data.unlockedBorders || unlockedBorders;
+                redeemedCodes = data.redeemedCodes || []; // Đồng bộ lịch sử nhập code
             } else {
                 await pushDataToFirebase();
             }
         } catch (e) { console.error("Lỗi đồng bộ:", e); }
     }
 
-    // Hàm tự động cập nhật link avatar cũ lên bản 9.x mới để ko bị màn hình trắng
     function fixBrokenAvatarURL(url) {
         if(!url) return "https://api.dicebear.com/9.x/adventurer/svg?seed=Felix";
-        return url.replace('7.x/bottts', '9.x/adventurer')
-                  .replace('7.x/avataaars', '9.x/adventurer')
-                  .replace('7.x/fun-emoji', '9.x/adventurer')
-                  .replace('7.x', '9.x');
+        return url.replace('7.x/bottts', '9.x/adventurer').replace('7.x/avataaars', '9.x/adventurer').replace('7.x/fun-emoji', '9.x/adventurer').replace('7.x', '9.x');
     }
 
     async function pushDataToFirebase() {
         if (!userName) return;
         const userData = {
-            name: userName,
-            avatar: userAvatar,
-            border: userBorder,
-            keys: userKeys,
-            unlockedAvatars: unlockedAvatars,
-            unlockedBorders: unlockedBorders,
-            lastLogin: Date.now()
+            name: userName, avatar: userAvatar, border: userBorder,
+            keys: userKeys, unlockedAvatars: unlockedAvatars, unlockedBorders: unlockedBorders,
+            redeemedCodes: redeemedCodes, lastLogin: Date.now()
         };
         try {
             await fetch(`${FIREBASE_BASE_URL}/users/${userName.toLowerCase()}.json`, {
-                method: 'PUT',
-                body: JSON.stringify(userData)
+                method: 'PUT', body: JSON.stringify(userData)
             });
         } catch (e) { console.error("Lỗi đẩy dữ liệu:", e); }
     }
 
     function updateUIHeader() {
-        displayUserName.textContent = userName;
-        displayUserAvatar.src = userAvatar;
+        displayUserName.textContent = userName; displayUserAvatar.src = userAvatar;
         displayUserAvatar.className = `header-avatar avatar-with-border ${userBorder}`;
-        displayKeys.textContent = userKeys;
-        mainHeader.classList.remove('hidden');
+        displayKeys.textContent = userKeys; mainHeader.classList.remove('hidden');
     }
 
     function renderAvatarSelector() {
-        const selector = document.getElementById('avatar-selector');
-        selector.innerHTML = '';
+        const selector = document.getElementById('avatar-selector'); selector.innerHTML = '';
         const tempAvatars = AVATAR_SEEDS.map(seed => `https://api.dicebear.com/9.x/adventurer/svg?seed=${seed}`);
         tempAvatars.forEach((url, index) => {
-            const img = document.createElement('img');
-            img.src = url; img.className = 'avatar-option';
+            const img = document.createElement('img'); img.src = url; img.className = 'avatar-option';
             if (index === 0 && !userAvatar) userAvatar = url; 
             if (userAvatar === url) img.classList.add('selected');
             img.onclick = () => {
                 document.querySelectorAll('.avatar-option').forEach(el => el.classList.remove('selected'));
                 img.classList.add('selected'); userAvatar = url;
-            };
-            selector.appendChild(img);
+            }; selector.appendChild(img);
         });
     }
 
     document.getElementById('start-app-btn').addEventListener('click', async () => {
         const inputName = document.getElementById('username-input').value.trim();
         if (inputName.length < 2) return alert("Vui lòng nhập tên của bạn (ít nhất 2 ký tự)!");
-        userName = inputName;
-        localStorage.setItem('quiz_username', userName);
-        await syncDataFromFirebase();
-        initApp();
+        userName = inputName; localStorage.setItem('quiz_username', userName);
+        await syncDataFromFirebase(); initApp();
     });
 
     document.getElementById('change-name-btn').addEventListener('click', () => {
         userName = ""; localStorage.removeItem('quiz_username');
-        document.getElementById('username-input').value = "";
-        initApp();
+        document.getElementById('username-input').value = ""; initApp();
     });
 
     function initLobby() {
-        const quizListContainer = document.getElementById('quiz-list-container');
-        quizListContainer.innerHTML = '';
+        const quizListContainer = document.getElementById('quiz-list-container'); quizListContainer.innerHTML = '';
         QUIZ_LIST.forEach(quiz => {
             const btn = document.createElement('div'); btn.className = 'quiz-card-btn';
             btn.innerHTML = `<span>${quiz.title}</span><small>File: ${quiz.file}</small>
                 <button class="btn-lb-small" onclick="event.stopPropagation(); loadLeaderboard('${quiz.id}', '${quiz.title}')">🏆 Xem BXH</button>`;
-            btn.onclick = () => selectQuiz(quiz);
-            quizListContainer.appendChild(btn);
+            btn.onclick = () => selectQuiz(quiz); quizListContainer.appendChild(btn);
         });
         showSection('lobby');
         document.getElementById('app-main-title').textContent = "Sảnh Chờ";
-        document.getElementById('home-btn').classList.add('hidden');
-        timerDisplay.classList.add('hidden'); 
+        document.getElementById('home-btn').classList.add('hidden'); timerDisplay.classList.add('hidden'); 
     }
 
     function showSection(sectionId) {
         ['login', 'lobby', 'loading', 'quiz', 'result', 'leaderboard'].forEach(id => {
-            const el = document.getElementById(`${id}-section`);
-            if (el) el.classList.add('hidden');
+            const el = document.getElementById(`${id}-section`); if (el) el.classList.add('hidden');
         });
-        const target = document.getElementById(`${sectionId}-section`);
-        if (target) target.classList.remove('hidden');
+        const target = document.getElementById(`${sectionId}-section`); if (target) target.classList.remove('hidden');
     }
+
+    // --- HỆ THỐNG GIFTCODE ---
+    document.getElementById('redeem-btn').addEventListener('click', async () => {
+        const codeInput = document.getElementById('giftcode-input');
+        const statusText = document.getElementById('giftcode-status');
+        const code = codeInput.value.trim().toUpperCase(); // Tự động viết hoa để khớp code
+        const btn = document.getElementById('redeem-btn');
+
+        if (!code) { statusText.textContent = '❌ Bạn chưa nhập mã code!'; statusText.style.color = '#ef4444'; return; }
+        
+        // Kiểm tra xem người dùng đã xài mã này chưa
+        if (redeemedCodes.includes(code)) {
+            statusText.textContent = '❌ Mã này bạn đã sử dụng rồi!'; statusText.style.color = '#ef4444'; return;
+        }
+
+        btn.disabled = true; btn.textContent = 'Đang kiểm tra...'; statusText.textContent = '';
+
+        try {
+            // Lấy dữ liệu mã code từ thư mục /codes/MACode trên Firebase
+            const res = await fetch(`${FIREBASE_BASE_URL}/codes/${code}.json`);
+            const data = await res.json();
+
+            if (!data) {
+                statusText.textContent = '❌ Mã code không tồn tại hoặc đã hết hạn!'; statusText.style.color = '#ef4444';
+            } else {
+                const reward = parseInt(data.rewardkey) || 0;
+                if (reward > 0) {
+                    userKeys += reward;
+                    redeemedCodes.push(code); // Lưu lịch sử nhận code
+                    await pushDataToFirebase();
+                    updateUIHeader();
+                    
+                    statusText.textContent = `🎉 Đổi thành công! Bạn nhận được ${reward} 🔑`;
+                    statusText.style.color = '#10b981';
+                    codeInput.value = '';
+                } else {
+                    statusText.textContent = '❌ Mã code bị lỗi phần thưởng!'; statusText.style.color = '#ef4444';
+                }
+            }
+        } catch (error) {
+            statusText.textContent = '❌ Lỗi kết nối mạng! Vui lòng thử lại.'; statusText.style.color = '#ef4444';
+        }
+
+        btn.disabled = false; btn.textContent = 'Nhận Thưởng';
+    });
 
     // --- XỬ LÝ VÒNG QUAY ---
     let isSpinning = false;
     document.getElementById('spin-btn').addEventListener('click', async () => {
         if (isSpinning) return;
-        if (userKeys <= 0) return alert("Bạn không đủ chìa khóa! Hãy đạt 100% điểm bài thi để nhận thêm.");
+        if (userKeys <= 0) return alert("Bạn không đủ chìa khóa! Hãy đạt 100% điểm bài thi hoặc nhập Giftcode để nhận thêm.");
         
-        isSpinning = true;
-        userKeys--; // Trừ Key ngay lập tức
-        updateUIHeader();
-        
+        isSpinning = true; userKeys--; updateUIHeader();
         const spinBtn = document.getElementById('spin-btn');
         spinBtn.disabled = true; spinBtn.textContent = "Đang quay...";
-        
-        const wheel = document.getElementById('gacha-wheel');
-        wheel.classList.add('spinning');
+        const wheel = document.getElementById('gacha-wheel'); wheel.classList.add('spinning');
         document.getElementById('gacha-status').textContent = "Đang triệu hồi nhân phẩm...";
         
-        let rand = Math.random() * 100;
-        let sum = 0; let wonItem = GACHA_POOL[GACHA_POOL.length - 1];
-        for (let item of GACHA_POOL) {
-            sum += item.chance;
-            if (rand <= sum) { wonItem = item; break; }
-        }
+        let rand = Math.random() * 100; let sum = 0; let wonItem = GACHA_POOL[GACHA_POOL.length - 1];
+        for (let item of GACHA_POOL) { sum += item.chance; if (rand <= sum) { wonItem = item; break; } }
 
         setTimeout(async () => {
             wheel.classList.remove('spinning');
             spinBtn.disabled = false; spinBtn.textContent = "Quay Ngay (1 🔑)";
-            document.getElementById('gacha-status').textContent = "";
-            isSpinning = false;
+            document.getElementById('gacha-status').textContent = ""; isSpinning = false;
             
             let isDuplicate = false;
             if (wonItem.type === 'avatar') {
-                if (!unlockedAvatars.includes(wonItem.url)) unlockedAvatars.push(wonItem.url);
-                else isDuplicate = true;
+                if (!unlockedAvatars.includes(wonItem.url)) unlockedAvatars.push(wonItem.url); else isDuplicate = true;
             } else {
-                if (!unlockedBorders.includes(wonItem.class)) unlockedBorders.push(wonItem.class);
-                else isDuplicate = true;
+                if (!unlockedBorders.includes(wonItem.class)) unlockedBorders.push(wonItem.class); else isDuplicate = true;
             }
             
-            // LOGIC MỚI: Không hoàn key nếu bị trùng
             if (isDuplicate) {
                 document.getElementById('gacha-result-title').textContent = "Trùng lặp! ♻️";
                 document.getElementById('gacha-item-desc').innerHTML = `Bạn nhận được <b>${wonItem.name}</b>. Tuy nhiên bạn đã sở hữu vật phẩm này rồi, <b>rất tiếc hệ thống sẽ không hoàn lại chìa khóa</b>. Chúc may mắn lần sau nhé!`;
-                document.getElementById('equip-gacha-btn').classList.add('hidden'); // Ẩn nút trang bị vì đã có
+                document.getElementById('equip-gacha-btn').classList.add('hidden');
             } else {
                 document.getElementById('gacha-result-title').textContent = "🎉 Chúc Mừng! 🎉";
                 document.getElementById('gacha-item-desc').textContent = wonItem.desc;
                 document.getElementById('equip-gacha-btn').classList.remove('hidden');
             }
             
-            await pushDataToFirebase();
-            updateUIHeader();
-            
+            await pushDataToFirebase(); updateUIHeader();
             document.getElementById('gacha-item-name').textContent = wonItem.name;
             const displayBox = document.getElementById('gacha-item-display');
             displayBox.innerHTML = wonItem.type === 'avatar' ? `<img src="${wonItem.url}" style="width:100%; border-radius:50%;">` : `<div class="avatar-with-border ${wonItem.class}" style="width:100%;height:100%;background:#f1f5f9;border-radius:50%"></div>`;
@@ -234,44 +237,34 @@ document.addEventListener("DOMContentLoaded", () => {
             
             document.getElementById('equip-gacha-btn').onclick = async () => {
                 if (wonItem.type === 'avatar') userAvatar = wonItem.url; else userBorder = wonItem.class;
-                await pushDataToFirebase();
-                updateUIHeader();
-                closeModals();
+                await pushDataToFirebase(); updateUIHeader(); closeModals();
             };
         }, 1500);
     });
 
-    // --- BẢNG TỈ LỆ VÀ TÚI ĐỒ ---
     document.getElementById('view-rates-btn').addEventListener('click', () => {
         document.getElementById('modal-overlay').classList.remove('hidden');
         document.getElementById('rates-modal').classList.remove('hidden');
     });
 
+    // --- TÚI ĐỒ ---
     document.getElementById('inventory-btn').addEventListener('click', () => {
-        const avaGrid = document.getElementById('inventory-avatars');
-        const borderGrid = document.getElementById('inventory-borders');
+        const avaGrid = document.getElementById('inventory-avatars'); const borderGrid = document.getElementById('inventory-borders');
         avaGrid.innerHTML = ''; borderGrid.innerHTML = '';
 
         unlockedAvatars.forEach(url => {
-            const img = document.createElement('img');
-            img.src = url; img.className = `inv-item avatar-with-border border-none ${userAvatar === url ? 'equipped' : ''}`;
-            img.onclick = async () => { userAvatar = url; await pushDataToFirebase(); updateUIHeader(); closeModals(); };
-            avaGrid.appendChild(img);
+            const img = document.createElement('img'); img.src = url; img.className = `inv-item avatar-with-border border-none ${userAvatar === url ? 'equipped' : ''}`;
+            img.onclick = async () => { userAvatar = url; await pushDataToFirebase(); updateUIHeader(); closeModals(); }; avaGrid.appendChild(img);
         });
 
-        const noBorder = document.createElement('div');
-        noBorder.className = `inv-item avatar-with-border border-none ${userBorder === 'border-none' ? 'equipped' : ''}`;
+        const noBorder = document.createElement('div'); noBorder.className = `inv-item avatar-with-border border-none ${userBorder === 'border-none' ? 'equipped' : ''}`;
         noBorder.style.display = 'flex'; noBorder.style.alignItems = 'center'; noBorder.style.justifyContent = 'center'; noBorder.style.fontSize = '12px'; noBorder.textContent = 'Bỏ viền';
-        noBorder.onclick = async () => { userBorder = 'border-none'; await pushDataToFirebase(); updateUIHeader(); closeModals(); };
-        borderGrid.appendChild(noBorder);
+        noBorder.onclick = async () => { userBorder = 'border-none'; await pushDataToFirebase(); updateUIHeader(); closeModals(); }; borderGrid.appendChild(noBorder);
 
         unlockedBorders.forEach(bClass => {
             if(bClass === 'border-none') return;
-            const div = document.createElement('div');
-            div.className = `inv-item avatar-with-border ${bClass} ${userBorder === bClass ? 'equipped' : ''}`;
-            div.style.background = "#eee";
-            div.onclick = async () => { userBorder = bClass; await pushDataToFirebase(); updateUIHeader(); closeModals(); };
-            borderGrid.appendChild(div);
+            const div = document.createElement('div'); div.className = `inv-item avatar-with-border ${bClass} ${userBorder === bClass ? 'equipped' : ''}`; div.style.background = "#eee";
+            div.onclick = async () => { userBorder = bClass; await pushDataToFirebase(); updateUIHeader(); closeModals(); }; borderGrid.appendChild(div);
         });
 
         document.getElementById('modal-overlay').classList.remove('hidden');
@@ -290,34 +283,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- TẢI BÀI THI & CHẤM ĐIỂM ---
     async function selectQuiz(quizObj) {
-        currentQuiz = quizObj;
-        document.getElementById('app-main-title').textContent = quizObj.title;
-        document.getElementById('home-btn').classList.remove('hidden');
-        timerDisplay.classList.remove('hidden');
-        showSection('loading');
+        currentQuiz = quizObj; document.getElementById('app-main-title').textContent = quizObj.title;
+        document.getElementById('home-btn').classList.remove('hidden'); timerDisplay.classList.remove('hidden'); showSection('loading');
         try {
             const response = await fetch(currentQuiz.file + `?t=${new Date().getTime()}`);
             if (!response.ok) throw new Error(`Không tìm thấy file ${currentQuiz.file}`);
-            questions = parseData(await response.text());
-            startQuiz();
+            questions = parseData(await response.text()); startQuiz();
         } catch (error) { document.getElementById('loading-section').innerHTML = `<p style="color:red; text-align:center;">Lỗi: ${error.message}</p>`; }
     }
 
     function parseData(text) {
         const lines = text.split('\n'); const parsed = []; let current = null;
         lines.forEach(line => {
-            line = line.replace(/[\u200B-\u200D\uFEFF]/g, '').trim(); 
-            if (!line) return;
+            line = line.replace(/[\u200B-\u200D\uFEFF]/g, '').trim();  if (!line) return;
             let qMatch = line.match(/^Ask\d+:\s*(.*)/i);
             if (qMatch) { if (current) parsed.push(current); current = { questionText: qMatch[1], options: [], images: [], type: 'single', rawKey: null }; return; }
-            let imgMatch = line.match(/^anh\d*:\s*(.*)/i);
-            if (imgMatch && current) { current.images.push(imgMatch[1]); return; }
-            let tMatch = line.match(/^Type:\s*(.*)/i);
-            if (tMatch && current) { current.type = tMatch[1].toLowerCase().trim(); return; }
-            let aMatch = line.match(/^answer\d+:\s*(.*)/i);
-            if (aMatch && current) { current.options.push(aMatch[1]); return; }
-            let kMatch = line.match(/^Key:\s*(.*)/i);
-            if (kMatch && current) { current.rawKey = kMatch[1]; }
+            let imgMatch = line.match(/^anh\d*:\s*(.*)/i); if (imgMatch && current) { current.images.push(imgMatch[1]); return; }
+            let tMatch = line.match(/^Type:\s*(.*)/i); if (tMatch && current) { current.type = tMatch[1].toLowerCase().trim(); return; }
+            let aMatch = line.match(/^answer\d+:\s*(.*)/i); if (aMatch && current) { current.options.push(aMatch[1]); return; }
+            let kMatch = line.match(/^Key:\s*(.*)/i); if (kMatch && current) { current.rawKey = kMatch[1]; }
         });
         if (current) parsed.push(current);
         parsed.forEach(q => {
@@ -346,18 +330,15 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateTimer() { const elapsed = Math.floor((Date.now() - startTime) / 1000); const m = String(Math.floor(elapsed / 60)).padStart(2, '0'); const s = String(elapsed % 60).padStart(2, '0'); timerSpan.textContent = `${m}:${s}`; }
 
     document.getElementById('quiz-form').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        clearInterval(timerInterval);
-        const timeTakenMs = Date.now() - startTime;
-        const timeStr = timerSpan.textContent;
+        e.preventDefault(); clearInterval(timerInterval);
+        const timeTakenMs = Date.now() - startTime; const timeStr = timerSpan.textContent;
         await evaluateAndSaveResults(timeTakenMs, timeStr);
     });
 
     async function evaluateAndSaveResults(timeTakenMs, timeStr) {
         let correctCount = 0; let objectiveCount = 0; 
         const formData = new FormData(document.getElementById('quiz-form'));
-        const reviewContainer = document.getElementById('review-container');
-        reviewContainer.innerHTML = '';
+        const reviewContainer = document.getElementById('review-container'); reviewContainer.innerHTML = '';
 
         questions.forEach((q, qIndex) => {
             if (q.type === 'essay') { reviewContainer.appendChild(buildReviewItem(q, qIndex, null, formData)); } 
@@ -377,9 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showSection('result'); window.scrollTo(0, 0);
 
         if (accuracy === 100) {
-            userKeys++;
-            await pushDataToFirebase();
-            updateUIHeader();
+            userKeys++; await pushDataToFirebase(); updateUIHeader();
             setTimeout(() => alert("🎉 THIÊN TÀI LỘ DIỆN! Bạn đạt 100% điểm tuyệt đối và được thưởng 1 🔑 Vòng Quay Nhân Phẩm!"), 500);
         }
 
@@ -391,8 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             const dbUrl = `${FIREBASE_BASE_URL}/leaderboard_${currentQuiz.id}.json`;
-            const res = await fetch(dbUrl);
-            const data = await res.json();
+            const res = await fetch(dbUrl); const data = await res.json();
             let existingKey = null; let shouldUpdate = true;
 
             if (data) {
@@ -409,7 +387,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             }
-
             if (shouldUpdate) {
                 if (existingKey) await fetch(`${FIREBASE_BASE_URL}/leaderboard_${currentQuiz.id}/${existingKey}.json`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(record) });
                 else await fetch(dbUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(record) });
@@ -430,38 +407,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- RENDER BXH ---
     window.loadLeaderboard = async function(quizId, quizTitle) {
-        document.getElementById('app-main-title').textContent = "Bảng Xếp Hạng";
-        document.getElementById('home-btn').classList.remove('hidden');
-        document.getElementById('lb-title').textContent = `Môn: ${quizTitle}`;
-        const lbBody = document.getElementById('lb-body');
-        lbBody.innerHTML = `<tr><td colspan="6" style="text-align:center;">Đang tải dữ liệu...</td></tr>`;
-        showSection('leaderboard');
-
+        document.getElementById('app-main-title').textContent = "Bảng Xếp Hạng"; document.getElementById('home-btn').classList.remove('hidden'); document.getElementById('lb-title').textContent = `Môn: ${quizTitle}`;
+        const lbBody = document.getElementById('lb-body'); lbBody.innerHTML = `<tr><td colspan="6" style="text-align:center;">Đang tải dữ liệu...</td></tr>`; showSection('leaderboard');
         try {
-            const res = await fetch(`${FIREBASE_BASE_URL}/leaderboard_${quizId}.json`);
-            const data = await res.json();
+            const res = await fetch(`${FIREBASE_BASE_URL}/leaderboard_${quizId}.json`); const data = await res.json();
             if (!data) return lbBody.innerHTML = `<tr><td colspan="6" style="text-align:center;">Chưa có ai thi môn này. Hãy là người đầu tiên!</td></tr>`;
-
-            let records = Object.values(data).sort((a, b) => (b.correct !== a.correct) ? b.correct - a.correct : a.timeMs - b.timeMs).slice(0, 50);
-            lbBody.innerHTML = '';
-
+            let records = Object.values(data).sort((a, b) => (b.correct !== a.correct) ? b.correct - a.correct : a.timeMs - b.timeMs).slice(0, 50); lbBody.innerHTML = '';
             records.forEach((rec, index) => {
-                const tr = document.createElement('tr');
-                const rank = index + 1;
-                let rankIcon = rank;
+                const tr = document.createElement('tr'); const rank = index + 1; let rankIcon = rank;
                 if(rank === 1) rankIcon = "🥇 1"; if(rank === 2) rankIcon = "🥈 2"; if(rank === 3) rankIcon = "🥉 3";
                 if (rank <= 3) tr.className = `rank-${rank}`;
-
                 let crownHtml = ''; let nameClass = ''; let sparklesHtml = '';
-                if (rank === 1) { 
-                    crownHtml = '<div class="crown-icon">👑</div>'; nameClass = 'gold-text'; 
-                    sparklesHtml = `<div class="sparkle" style="top:-5px; left:-10px; animation-delay:0s;"></div><div class="sparkle" style="bottom:0px; right:-15px; animation-delay:0.5s;"></div><div class="sparkle" style="top:50%; right:50%; animation-delay:1s;"></div>`;
-                } else if (rank === 2) nameClass = 'silver-text'; 
-                else if (rank === 3) nameClass = 'bronze-text'; 
-
-                let displayAvatar = fixBrokenAvatarURL(rec.avatar);
-                let displayBorder = rec.border || 'border-none';
-
+                if (rank === 1) { crownHtml = '<div class="crown-icon">👑</div>'; nameClass = 'gold-text'; sparklesHtml = `<div class="sparkle" style="top:-5px; left:-10px; animation-delay:0s;"></div><div class="sparkle" style="bottom:0px; right:-15px; animation-delay:0.5s;"></div><div class="sparkle" style="top:50%; right:50%; animation-delay:1s;"></div>`; } 
+                else if (rank === 2) nameClass = 'silver-text'; else if (rank === 3) nameClass = 'bronze-text'; 
+                let displayAvatar = fixBrokenAvatarURL(rec.avatar); let displayBorder = rec.border || 'border-none';
                 tr.innerHTML = `
                     <td>${rankIcon}</td>
                     <td>
@@ -474,14 +433,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${rec.accuracy}%</td>
                     <td>${rec.timeStr}</td>
                     <td><span style="color:green">✓${rec.correct}</span> / <span style="color:red">✗${rec.wrong}</span></td>
-                `;
-                lbBody.appendChild(tr);
+                `; lbBody.appendChild(tr);
             });
         } catch (error) { lbBody.innerHTML = `<tr><td colspan="6" style="text-align:center; color:red;">Lỗi tải dữ liệu.</td></tr>`; }
     };
 
     function escapeHTML(str) { return str.replace(/[&<>'"]/g, tag => ({'&': '&amp;','<': '&lt;','>': '&gt;',"'": '&#39;','"': '&quot;'}[tag] || tag)); }
-    
     document.getElementById('retake-btn').addEventListener('click', () => { selectQuiz(currentQuiz); });
     document.getElementById('view-leaderboard-btn').addEventListener('click', () => { window.loadLeaderboard(currentQuiz.id, currentQuiz.title); });
     document.getElementById('home-btn').addEventListener('click', () => { clearInterval(timerInterval); initLobby(); });
