@@ -16,7 +16,8 @@
             </div>
             <div class="header-controls">
                 <div class="user-profile">
-                    👤 <span id="display-user-name">Đang tải...</span>
+                    <img id="display-user-avatar" src="" alt="Avatar" class="header-avatar">
+                    <span id="display-user-name">Đang tải...</span>
                     <button id="change-name-btn" class="btn-text">Đổi tên</button>
                 </div>
                 <div id="timer-display" class="timer hidden">Thời gian: <span>00:00</span></div>
@@ -28,6 +29,11 @@
                 <h2>👋 Chào mừng bạn đến với hệ thống ôn tập</h2>
                 <p>Vui lòng nhập họ và tên của bạn để bắt đầu.</p>
                 <input type="text" id="username-input" placeholder="Ví dụ: Nguyễn Văn A..." autocomplete="off">
+                
+                <p style="margin-top: 15px; font-weight: 600; color: var(--primary-color);">Chọn ảnh đại diện của bạn:</p>
+                <div class="avatar-selector" id="avatar-selector">
+                    </div>
+
                 <div class="warning-text">⚠️ Lưu ý: Tất cả dữ liệu điểm số và xếp hạng của bạn sẽ được lưu theo tên này. Hãy nhập tên thật hoặc biệt danh cố định.</div>
                 <button id="start-app-btn" class="btn btn-primary">Vào sảnh chính</button>
             </div>
@@ -78,7 +84,7 @@
                     <thead>
                         <tr>
                             <th>Hạng</th>
-                            <th>Họ và Tên</th>
+                            <th>Học Sinh</th>
                             <th>Điểm</th>
                             <th>Tỷ lệ</th>
                             <th>TGian</th>
