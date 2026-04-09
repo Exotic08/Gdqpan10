@@ -1,5 +1,5 @@
 /**
- * EdTech Quiz - Đồng bộ Chìa khóa, Túi đồ, Gacha phạt Trùng, Fix API Ảnh và GIFTCODE
+ * EdTech Quiz - Upload & Nén Avatar, Bộ Đếm Lượt Thi, Đồng bộ Full Firebase
  */
 
 const QUIZ_LIST = [
@@ -26,15 +26,18 @@ const GACHA_POOL = [
 
 document.addEventListener("DOMContentLoaded", () => {
     let currentQuiz = null; let questions = []; let startTime = null; let timerInterval = null;
+    let cropper = null; // Biến cho công cụ cắt ảnh
+    let quizStats = {}; // Lưu số lượt làm bài của từng đề
     
     // Khởi tạo state
     let userName = localStorage.getItem('quiz_username') || "";
     let userAvatar = "https://api.dicebear.com/9.x/adventurer/svg?seed=Felix";
+    let customAvatar = null; // Lưu ảnh tự tải lên riêng biệt để tránh làm phình mảng
     let userBorder = "border-none";
     let userKeys = 0;
     let unlockedAvatars = AVATAR_SEEDS.map(seed => `https://api.dicebear.com/9.x/adventurer/svg?seed=${seed}`);
     let unlockedBorders = ['border-none'];
-    let redeemedCodes = []; // Mảng chứa các code đã nhập
+    let redeemedCodes = [];
 
     const displayUserAvatar = document.getElementById('display-user-avatar');
     const displayUserName = document.getElementById('display-user-name');
@@ -63,11 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await res.json();
             if (data) {
                 userAvatar = fixBrokenAvatarURL(data.avatar || userAvatar);
+                customAvatar = data.customAvatar || null;
                 userBorder = data.border || userBorder;
                 userKeys = data.keys || 0;
                 unlockedAvatars = (data.unlockedAvatars || unlockedAvatars).map(url => fixBrokenAvatarURL(url));
                 unlockedBorders = data.unlockedBorders || unlockedBorders;
-                redeemedCodes = data.redeemedCodes || []; // Đồng bộ lịch sử nhập code
+                redeemedCodes = data.redeemedCodes || [];
             } else {
                 await pushDataToFirebase();
             }
@@ -76,13 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function fixBrokenAvatarURL(url) {
         if(!url) return "https://api.dicebear.com/9.x/adventurer/svg?seed=Felix";
+        if(url.startsWith('data:image')) return url; // Nếu là ảnh tự up thì bỏ qua
         return url.replace('7.x/bottts', '9.x/adventurer').replace('7.x/avataaars', '9.x/adventurer').replace('7.x/fun-emoji', '9.x/adventurer').replace('7.x', '9.x');
     }
 
     async function pushDataToFirebase() {
         if (!userName) return;
         const userData = {
-            name: userName, avatar: userAvatar, border: userBorder,
+            name: userName, avatar: userAvatar, customAvatar: customAvatar, border: userBorder,
             keys: userKeys, unlockedAvatars: unlockedAvatars, unlockedBorders: unlockedBorders,
             redeemedCodes: redeemedCodes, lastLogin: Date.now()
         };
@@ -101,18 +106,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderAvatarSelector() {
         const selector = document.getElementById('avatar-selector'); selector.innerHTML = '';
+        
+        // Thêm ảnh tự up vào đầu danh sách nếu có
+        if(customAvatar) {
+            const img = document.createElement('img'); img.src = customAvatar; img.className = 'avatar-option';
+            if (userAvatar === customAvatar) img.classList.add('selected');
+            img.onclick = () => { selectAvatarDOM(img, customAvatar); }; selector.appendChild(img);
+        }
+
         const tempAvatars = AVATAR_SEEDS.map(seed => `https://api.dicebear.com/9.x/adventurer/svg?seed=${seed}`);
         tempAvatars.forEach((url, index) => {
             const img = document.createElement('img'); img.src = url; img.className = 'avatar-option';
-            if (index === 0 && !userAvatar) userAvatar = url; 
+            if (!customAvatar && index === 0 && !userAvatar) userAvatar = url; 
             if (userAvatar === url) img.classList.add('selected');
-            img.onclick = () => {
-                document.querySelectorAll('.avatar-option').forEach(el => el.classList.remove('selected'));
-                img.classList.add('selected'); userAvatar = url;
-            }; selector.appendChild(img);
+            img.onclick = () => { selectAvatarDOM(img, url); }; selector.appendChild(img);
         });
     }
 
+    function selectAvatarDOM(imgElement, url) {
+        document.querySelectorAll('.avatar-option').forEach(el => el.classList.remove('selected'));
+        imgElement.classList.add('selected'); userAvatar = url;
+    }
+
+    // --- UPLOAD VÀ CẮT ẢNH BẰNG CROPPER.JS ---
+    document.getElementById('avatar-upload-input').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+        if (file.size > 2 * 1024 * 1024) { alert("Ảnh quá nặng! Vui lòng chọn ảnh dưới 2MB."); return; }
+        
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            document.getElementById('crop-image').src = event.target.result;
+            closeModals(); // Đóng các modal khác nếu có
+            document.getElementById('modal-overlay').classList.remove('hidden');
+            document.getElementById('crop-modal').classList.remove('hidden');
+            
+            if(cropper) cropper.destroy();
+            cropper = new Cropper(document.getElementById('crop-image'), {
+                aspectRatio: 1, // Ép khung hình vuông
+                viewMode: 1, autoCropArea: 1
+            });
+        };
+        reader.readAsDataURL(file);
+        e.target.value = ''; // Reset input để có thể up lại ảnh cũ
+    });
+
+    document.getElementById('apply-crop-btn').addEventListener('click', async () => {
+        if (!cropper) return;
+        // Cắt và nén ảnh về 150x150, chất lượng 70% (dung lượng sẽ siêu nhỏ ~10KB)
+        const canvas = cropper.getCroppedCanvas({ width: 150, height: 150 });
+        const base64Avatar = canvas.toDataURL('image/jpeg', 0.7);
+        
+        customAvatar = base64Avatar;
+        userAvatar = base64Avatar; // Chọn luôn ảnh vừa up
+
+        closeModals();
+        if(cropper) { cropper.destroy(); cropper = null; }
+
+        if (userName) {
+            await pushDataToFirebase();
+            updateUIHeader();
+            alert("Đã cập nhật ảnh đại diện thành công!");
+        } else {
+            renderAvatarSelector(); // Nếu chưa đăng nhập thì chỉ update UI chọn
+        }
+    });
+
+    document.getElementById('cancel-crop-btn').addEventListener('click', () => {
+        closeModals(); if(cropper) { cropper.destroy(); cropper = null; }
+    });
+
+    // --- ĐĂNG NHẬP / ĐĂNG XUẤT ---
     document.getElementById('start-app-btn').addEventListener('click', async () => {
         const inputName = document.getElementById('username-input').value.trim();
         if (inputName.length < 2) return alert("Vui lòng nhập tên của bạn (ít nhất 2 ký tự)!");
@@ -125,11 +189,23 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('username-input').value = ""; initApp();
     });
 
-    function initLobby() {
+    // --- HIỂN THỊ SẢNH VÀ LẤY SỐ LƯỢT THI ---
+    async function initLobby() {
         const quizListContainer = document.getElementById('quiz-list-container'); quizListContainer.innerHTML = '';
+        
+        // Fetch số lượt làm bài của tất cả các đề
+        try {
+            const res = await fetch(`${FIREBASE_BASE_URL}/quiz_stats.json`);
+            quizStats = (await res.json()) || {};
+        } catch(e) { console.error("Lỗi lấy stats", e); }
+
         QUIZ_LIST.forEach(quiz => {
+            const plays = quizStats[quiz.id] ? (quizStats[quiz.id].plays || 0) : 0;
             const btn = document.createElement('div'); btn.className = 'quiz-card-btn';
-            btn.innerHTML = `<span>${quiz.title}</span><small>File: ${quiz.file}</small>
+            btn.innerHTML = `
+                <span>${quiz.title}</span>
+                <small>File: ${quiz.file}</small>
+                <div class="play-count-badge">📝 Đã thi: ${plays} lượt</div>
                 <button class="btn-lb-small" onclick="event.stopPropagation(); loadLeaderboard('${quiz.id}', '${quiz.title}')">🏆 Xem BXH</button>`;
             btn.onclick = () => selectQuiz(quiz); quizListContainer.appendChild(btn);
         });
@@ -149,20 +225,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('redeem-btn').addEventListener('click', async () => {
         const codeInput = document.getElementById('giftcode-input');
         const statusText = document.getElementById('giftcode-status');
-        const code = codeInput.value.trim().toUpperCase(); // Tự động viết hoa để khớp code
+        const code = codeInput.value.trim().toUpperCase(); 
         const btn = document.getElementById('redeem-btn');
 
         if (!code) { statusText.textContent = '❌ Bạn chưa nhập mã code!'; statusText.style.color = '#ef4444'; return; }
-        
-        // Kiểm tra xem người dùng đã xài mã này chưa
-        if (redeemedCodes.includes(code)) {
-            statusText.textContent = '❌ Mã này bạn đã sử dụng rồi!'; statusText.style.color = '#ef4444'; return;
-        }
+        if (redeemedCodes.includes(code)) { statusText.textContent = '❌ Mã này bạn đã sử dụng rồi!'; statusText.style.color = '#ef4444'; return; }
 
         btn.disabled = true; btn.textContent = 'Đang kiểm tra...'; statusText.textContent = '';
 
         try {
-            // Lấy dữ liệu mã code từ thư mục /codes/MACode trên Firebase
             const res = await fetch(`${FIREBASE_BASE_URL}/codes/${code}.json`);
             const data = await res.json();
 
@@ -172,21 +243,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const reward = parseInt(data.rewardkey) || 0;
                 if (reward > 0) {
                     userKeys += reward;
-                    redeemedCodes.push(code); // Lưu lịch sử nhận code
-                    await pushDataToFirebase();
-                    updateUIHeader();
-                    
+                    redeemedCodes.push(code); 
+                    await pushDataToFirebase(); updateUIHeader();
                     statusText.textContent = `🎉 Đổi thành công! Bạn nhận được ${reward} 🔑`;
-                    statusText.style.color = '#10b981';
-                    codeInput.value = '';
-                } else {
-                    statusText.textContent = '❌ Mã code bị lỗi phần thưởng!'; statusText.style.color = '#ef4444';
-                }
+                    statusText.style.color = '#10b981'; codeInput.value = '';
+                } else { statusText.textContent = '❌ Mã code bị lỗi phần thưởng!'; statusText.style.color = '#ef4444'; }
             }
-        } catch (error) {
-            statusText.textContent = '❌ Lỗi kết nối mạng! Vui lòng thử lại.'; statusText.style.color = '#ef4444';
-        }
-
+        } catch (error) { statusText.textContent = '❌ Lỗi kết nối mạng!'; statusText.style.color = '#ef4444'; }
         btn.disabled = false; btn.textContent = 'Nhận Thưởng';
     });
 
@@ -219,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             if (isDuplicate) {
                 document.getElementById('gacha-result-title').textContent = "Trùng lặp! ♻️";
-                document.getElementById('gacha-item-desc').innerHTML = `Bạn nhận được <b>${wonItem.name}</b>. Tuy nhiên bạn đã sở hữu vật phẩm này rồi, <b>rất tiếc hệ thống sẽ không hoàn lại chìa khóa</b>. Chúc may mắn lần sau nhé!`;
+                document.getElementById('gacha-item-desc').innerHTML = `Bạn nhận được <b>${wonItem.name}</b>. Tuy nhiên bạn đã sở hữu vật phẩm này rồi, <b>rất tiếc hệ thống sẽ không hoàn lại chìa khóa</b>.`;
                 document.getElementById('equip-gacha-btn').classList.add('hidden');
             } else {
                 document.getElementById('gacha-result-title').textContent = "🎉 Chúc Mừng! 🎉";
@@ -252,6 +315,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const avaGrid = document.getElementById('inventory-avatars'); const borderGrid = document.getElementById('inventory-borders');
         avaGrid.innerHTML = ''; borderGrid.innerHTML = '';
 
+        // Hiển thị ảnh tự tải lên (nếu có)
+        if(customAvatar) {
+            const cImg = document.createElement('img'); cImg.src = customAvatar; cImg.className = `inv-item avatar-with-border border-none ${userAvatar === customAvatar ? 'equipped' : ''}`;
+            cImg.onclick = async () => { userAvatar = customAvatar; await pushDataToFirebase(); updateUIHeader(); closeModals(); }; avaGrid.appendChild(cImg);
+        }
+
         unlockedAvatars.forEach(url => {
             const img = document.createElement('img'); img.src = url; img.className = `inv-item avatar-with-border border-none ${userAvatar === url ? 'equipped' : ''}`;
             img.onclick = async () => { userAvatar = url; await pushDataToFirebase(); updateUIHeader(); closeModals(); }; avaGrid.appendChild(img);
@@ -276,6 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('inventory-modal').classList.add('hidden');
         document.getElementById('gacha-result-modal').classList.add('hidden');
         document.getElementById('rates-modal').classList.add('hidden');
+        document.getElementById('crop-modal').classList.add('hidden');
     }
     document.getElementById('close-inventory-btn').onclick = closeModals;
     document.getElementById('close-gacha-btn').onclick = closeModals;
@@ -356,6 +426,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('accuracy-display').textContent = `${accuracy}%`;
         document.getElementById('time-display').textContent = timeStr;
         showSection('result'); window.scrollTo(0, 0);
+
+        // Tăng đếm số lượt thi (Lưu lên Firebase)
+        try {
+            const currentPlays = quizStats[currentQuiz.id] ? (quizStats[currentQuiz.id].plays || 0) : 0;
+            await fetch(`${FIREBASE_BASE_URL}/quiz_stats/${currentQuiz.id}/plays.json`, { method: 'PUT', body: JSON.stringify(currentPlays + 1) });
+        } catch(e){}
 
         if (accuracy === 100) {
             userKeys++; await pushDataToFirebase(); updateUIHeader();
