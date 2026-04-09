@@ -15,9 +15,11 @@
                 <h1 id="app-main-title">Sảnh Chờ</h1>
             </div>
             <div class="header-controls">
+                <span class="badge" title="Chìa khóa vòng quay">🔑 <span id="display-keys">0</span></span>
                 <div class="user-profile">
-                    <img id="display-user-avatar" src="" alt="Avatar" class="header-avatar">
+                    <img id="display-user-avatar" src="" alt="Avatar" class="header-avatar avatar-with-border border-none">
                     <span id="display-user-name">Đang tải...</span>
+                    <button id="inventory-btn" class="btn-text" style="color: #10b981;">🎒 Túi đồ</button>
                     <button id="change-name-btn" class="btn-text">Đổi tên</button>
                 </div>
                 <div id="timer-display" class="timer hidden">Thời gian: <span>00:00</span></div>
@@ -30,19 +32,29 @@
                 <p>Vui lòng nhập họ và tên của bạn để bắt đầu.</p>
                 <input type="text" id="username-input" placeholder="Ví dụ: Nguyễn Văn A..." autocomplete="off">
                 
-                <p style="margin-top: 15px; font-weight: 600; color: var(--primary-color);">Chọn ảnh đại diện của bạn:</p>
-                <div class="avatar-selector" id="avatar-selector">
-                    </div>
+                <p style="margin-top: 15px; font-weight: 600; color: var(--primary-color);">Chọn ảnh đại diện tân thủ:</p>
+                <div class="avatar-selector" id="avatar-selector"></div>
 
-                <div class="warning-text">⚠️ Lưu ý: Tất cả dữ liệu điểm số và xếp hạng của bạn sẽ được lưu theo tên này. Hãy nhập tên thật hoặc biệt danh cố định.</div>
+                <div class="warning-text">⚠️ Lưu ý: Dữ liệu điểm số, túi đồ và chìa khóa được lưu theo tên này. Hãy nhập tên thật hoặc biệt danh cố định.</div>
                 <button id="start-app-btn" class="btn btn-primary">Vào sảnh chính</button>
             </div>
         </main>
 
         <main id="lobby-section" class="section hidden">
             <h2 style="text-align: center; margin-bottom: 30px; color: var(--text-main);">📚 Chọn bài thi của bạn</h2>
-            <div id="quiz-list-container" class="lobby-grid">
+            <div id="quiz-list-container" class="lobby-grid"></div>
+
+            <div class="gacha-container" id="gacha-section">
+                <div class="gacha-header">
+                    <h2>🎡 Vòng Quay Nhân Phẩm 🎡</h2>
+                    <p>Hoàn thành bài thi đạt <strong>100% chính xác</strong> để nhận 1 🔑</p>
                 </div>
+                <div class="gacha-wheel-box">
+                    <div id="gacha-wheel" class="gacha-wheel">🎁</div>
+                </div>
+                <button id="spin-btn" class="btn btn-gacha">Quay Ngay (1 🔑)</button>
+                <p id="gacha-status" style="margin-top: 10px; font-size: 0.9rem; color: #cbd5e1;"></p>
+            </div>
         </main>
 
         <main id="loading-section" class="section hidden">
@@ -78,7 +90,6 @@
         <main id="leaderboard-section" class="section hidden">
             <h2 style="text-align: center; color: var(--primary-color);">🏆 Bảng Xếp Hạng</h2>
             <h3 id="lb-title" style="text-align: center; margin-bottom: 20px; color: var(--text-muted);">Môn học</h3>
-            
             <div class="table-container">
                 <table class="lb-table">
                     <thead>
@@ -91,16 +102,40 @@
                             <th>Đúng/Sai</th>
                         </tr>
                     </thead>
-                    <tbody id="lb-body">
-                        </tbody>
+                    <tbody id="lb-body"></tbody>
                 </table>
             </div>
-            
             <div style="text-align: center; margin-top: 20px;">
                 <button id="lb-back-btn" class="btn btn-secondary">Quay lại</button>
             </div>
         </main>
 
+    </div>
+
+    <div id="modal-overlay" class="hidden modal-overlay">
+        <div id="inventory-modal" class="hidden modal-content">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 20px;">🎒 Túi Đồ Của Bạn</h2>
+            <h4 style="margin-bottom: 10px;">🖼️ Ảnh đại diện đã mở khóa:</h4>
+            <div id="inventory-avatars" class="inventory-grid"></div>
+            
+            <h4 style="margin: 20px 0 10px 0;">✨ Khung viền đã mở khóa:</h4>
+            <div id="inventory-borders" class="inventory-grid"></div>
+            
+            <div style="text-align: center; margin-top: 25px;">
+                <button id="close-inventory-btn" class="btn btn-secondary">Đóng Túi Đồ</button>
+            </div>
+        </div>
+
+        <div id="gacha-result-modal" class="hidden modal-content" style="text-align: center; max-width: 400px;">
+            <h2 id="gacha-result-title">🎉 Chúc Mừng! 🎉</h2>
+            <div id="gacha-item-display" style="margin: 30px auto; width: 100px; height: 100px; font-size: 3.5rem; display: flex; justify-content: center; align-items: center;"></div>
+            <h3 id="gacha-item-name" style="color: var(--primary-color); margin-bottom: 10px;">Tên vật phẩm</h3>
+            <p id="gacha-item-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;"></p>
+            <div style="display: flex; gap: 10px;">
+                <button id="equip-gacha-btn" class="btn btn-primary" style="flex: 1;">Trang bị luôn</button>
+                <button id="close-gacha-btn" class="btn btn-secondary" style="flex: 1;">Cất vào túi</button>
+            </div>
+        </div>
     </div>
 
     <script src="quiz.js"></script>
