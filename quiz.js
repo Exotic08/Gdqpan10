@@ -153,7 +153,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let current = null;
 
         lines.forEach(line => {
-            line = line.trim();
+            // Xóa ký tự tàng hình và khoảng trắng thừa
+            line = line.replace(/[\u200B-\u200D\uFEFF]/g, '').trim(); 
             if (!line) return;
 
             let qMatch = line.match(/^Ask\d+:\s*(.*)/i);
@@ -311,37 +312,31 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await res.json();
             
             let existingKey = null;
-            let shouldUpdate = true; // Cờ quyết định có lưu hay không
+            let shouldUpdate = true;
 
             if (data) {
-                // Duyệt qua tất cả người chơi trong DB
                 for (const [key, val] of Object.entries(data)) {
-                    // So sánh tên (đưa về chữ thường để tránh sai sót do in hoa/in thường)
                     if (val.name.trim().toLowerCase() === userName.trim().toLowerCase()) {
-                        existingKey = key; // Đã tìm thấy tài khoản cũ
+                        existingKey = key; 
                         
-                        // Kiểm tra xem kết quả mới có TỐT HƠN kết quả cũ không
                         if (record.correct < val.correct) {
-                            shouldUpdate = false; // Điểm thấp hơn -> Không lưu
+                            shouldUpdate = false; 
                         } else if (record.correct === val.correct && record.timeMs >= val.timeMs) {
-                            shouldUpdate = false; // Điểm bằng nhưng thời gian lâu hơn -> Không lưu
+                            shouldUpdate = false; 
                         }
-                        break; // Tìm thấy người này rồi thì thoát vòng lặp
+                        break; 
                     }
                 }
             }
 
-            // Thực hiện ghi dữ liệu nếu thỏa điều kiện
             if (shouldUpdate) {
                 if (existingKey) {
-                    // Nếu đã có tên -> Ghi đè (Cập nhật) thành tích mới vào dòng của người đó
                     await fetch(`${FIREBASE_BASE_URL}/leaderboard_${currentQuiz.id}/${existingKey}.json`, {
                         method: 'PATCH',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(record)
                     });
                 } else {
-                    // Nếu chưa có tên -> Tạo mới một dòng
                     await fetch(dbUrl, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -351,7 +346,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         } catch (error) { console.error("Lỗi lưu BXH", error); }
-        // --- KẾT THÚC LƯU BXH ---
     }
 
     function buildReviewItem(q, qIndex, isCorrect, formData) {
