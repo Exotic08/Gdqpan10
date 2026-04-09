@@ -135,3 +135,37 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
 .sparkle-box { position: relative; display: inline-block; }
 .sparkle { position: absolute; width: 6px; height: 6px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 4px #fff, 0 0 8px #fef08a, 0 0 12px #eab308; animation: sparkleAnim 1.5s infinite linear; opacity: 0; z-index: 5; }
 @keyframes sparkleAnim { 0% { transform: scale(0) rotate(0deg); opacity: 0; } 50% { transform: scale(1.2) rotate(180deg); opacity: 1; } 100% { transform: scale(0) rotate(360deg); opacity: 0; } }
+
+/* CSS KHU VỰC NHẬP GIFTCODE */
+.giftcode-container { 
+    margin-top: 30px; 
+    padding: 25px; 
+    border-radius: 12px; 
+    background: #ffffff; 
+    border: 2px dashed var(--primary-color); 
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+}
+.giftcode-input-group { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 15px; 
+    flex-wrap: wrap; 
+}
+#giftcode-input { 
+    padding: 12px 15px; 
+    font-size: 1.1rem; 
+    border: 2px solid var(--border-color); 
+    border-radius: 8px; 
+    width: 60%; 
+    max-width: 300px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    text-align: center;
+}
+#giftcode-input:focus { 
+    outline: none; 
+    border-color: var(--primary-color); 
+}
