@@ -57,19 +57,20 @@
                 <button id="view-rates-btn" class="btn-text" style="color: #fde047; margin-top: 15px; font-size: 0.95rem;">📊 Xem bảng tỉ lệ ra đồ</button>
                 <p id="gacha-status" style="margin-top: 10px; font-size: 0.9rem; color: #cbd5e1;"></p>
             </div>
+
+            <div class="giftcode-container">
+                <h3 style="color: var(--primary-color);">🎁 Nhập Giftcode Nhận Thưởng</h3>
+                <div class="giftcode-input-group">
+                    <input type="text" id="giftcode-input" placeholder="Nhập mã code tại đây..." autocomplete="off">
+                    <button id="redeem-btn" class="btn btn-primary">Nhận Thưởng</button>
+                </div>
+                <p id="giftcode-status" style="margin-top: 10px; font-weight: bold;"></p>
+            </div>
         </main>
 
-        <main id="loading-section" class="section hidden">
-            <p style="text-align: center; font-weight: 600;">Đang tải dữ liệu bài thi...</p>
-        </main>
-
-        <main id="quiz-section" class="section hidden">
-            <form id="quiz-form">
-                <div id="questions-container"></div>
-                <button type="submit" class="btn btn-primary btn-large">Nộp bài ngay</button>
-            </form>
-        </main>
-
+        <main id="loading-section" class="section hidden"><p style="text-align: center; font-weight: 600;">Đang tải dữ liệu bài thi...</p></main>
+        <main id="quiz-section" class="section hidden"><form id="quiz-form"><div id="questions-container"></div><button type="submit" class="btn btn-primary btn-large">Nộp bài ngay</button></form></main>
+        
         <main id="result-section" class="section hidden">
             <div class="result-summary">
                 <h2>Kết quả bài làm</h2>
@@ -83,10 +84,7 @@
                     <button id="retake-btn" class="btn btn-secondary" style="flex:1;">Làm lại bài này</button>
                 </div>
             </div>
-            <div class="detailed-review">
-                <h3>Đánh giá chi tiết</h3>
-                <div id="review-container"></div>
-            </div>
+            <div class="detailed-review"><h3>Đánh giá chi tiết</h3><div id="review-container"></div></div>
         </main>
 
         <main id="leaderboard-section" class="section hidden">
@@ -94,39 +92,22 @@
             <h3 id="lb-title" style="text-align: center; margin-bottom: 20px; color: var(--text-muted);">Môn học</h3>
             <div class="table-container">
                 <table class="lb-table">
-                    <thead>
-                        <tr>
-                            <th>Hạng</th>
-                            <th>Học Sinh</th>
-                            <th>Điểm</th>
-                            <th>Tỷ lệ</th>
-                            <th>TGian</th>
-                            <th>Đúng/Sai</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Hạng</th><th>Học Sinh</th><th>Điểm</th><th>Tỷ lệ</th><th>TGian</th><th>Đúng/Sai</th></tr></thead>
                     <tbody id="lb-body"></tbody>
                 </table>
             </div>
-            <div style="text-align: center; margin-top: 20px;">
-                <button id="lb-back-btn" class="btn btn-secondary">Quay lại</button>
-            </div>
+            <div style="text-align: center; margin-top: 20px;"><button id="lb-back-btn" class="btn btn-secondary">Quay lại</button></div>
         </main>
-
     </div>
 
     <div id="modal-overlay" class="hidden modal-overlay">
-        
         <div id="inventory-modal" class="hidden modal-content">
             <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 20px;">🎒 Túi Đồ Của Bạn</h2>
             <h4 style="margin-bottom: 10px;">🖼️ Ảnh đại diện đã mở khóa:</h4>
             <div id="inventory-avatars" class="inventory-grid"></div>
-            
             <h4 style="margin: 20px 0 10px 0;">✨ Khung viền đã mở khóa:</h4>
             <div id="inventory-borders" class="inventory-grid"></div>
-            
-            <div style="text-align: center; margin-top: 25px;">
-                <button id="close-inventory-btn" class="btn btn-secondary">Đóng Túi Đồ</button>
-            </div>
+            <div style="text-align: center; margin-top: 25px;"><button id="close-inventory-btn" class="btn btn-secondary">Đóng Túi Đồ</button></div>
         </div>
 
         <div id="gacha-result-modal" class="hidden modal-content" style="text-align: center; max-width: 400px;">
@@ -152,13 +133,9 @@
                 <li><span class="rate-avatar">🥷 Avatar Nhẫn Giả</span> <span>20%</span></li>
                 <li><span class="rate-rare">💎 Viền Hiếm</span> <span>25%</span></li>
             </ul>
-            <div style="text-align: center; margin-top: 20px;">
-                <button id="close-rates-btn" class="btn btn-secondary">Đã hiểu</button>
-            </div>
+            <div style="text-align: center; margin-top: 20px;"><button id="close-rates-btn" class="btn btn-secondary">Đã hiểu</button></div>
         </div>
-
     </div>
-
     <script src="quiz.js"></script>
 </body>
 </html>
