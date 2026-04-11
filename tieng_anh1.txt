@@ -10,7 +10,7 @@ answer1: device
 answer2: intelligence
 answer3: focus
 answer4: processor
-Key: 2
+Key: 3
 
 Ask3: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
 answer1: messaged
