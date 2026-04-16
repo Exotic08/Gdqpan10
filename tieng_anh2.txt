@@ -130,7 +130,7 @@ Key: information
 
 Ask20: Chia từ trong ngoặc (DIVERSE): Bac Lieu Bird Sanctuary Nature Reserve is a coastal rich and salt ________ forest floor with the natural salt-marsh ecosystem.
 Type: short
-Key: biodiverse
+Key: diversified
 
 Ask21: Chia từ trong ngoặc (DISPOSE): In areas with high concentrations of tourist activities and attractive natural attractions, waste ________ is a serious problem.
 Type: short
@@ -150,7 +150,7 @@ Key: His grandmother, who was a hard-working woman, had a great influence on his
 
 Ask25: Viết lại câu so sánh nhất: "No other country is wealthier than Japan."
 Type: short
-Key: Japan is the wealthiest country in the world.
+Key: Japan is the wealthiest country.
 
 Ask26: Viết lại câu bị động: "They must submit the assignment by next Monday."
 Type: short
