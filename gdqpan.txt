@@ -1,0 +1,374 @@
+Ask1: Khái niệm "an ninh quốc gia" được hiểu là gì?
+answer1: Là trạng thái bảo đảm ổn định, phát triển bền vững của chế độ và quốc gia.
+answer2: Là hoạt động bảo vệ tính mạng, tài sản của công dân trước các hành vi vi phạm.
+answer3: Là quá trình giữ gìn trật tự xã hội và phòng ngừa các nguy cơ gây rối.
+answer4: Là việc bảo vệ lợi ích quốc gia trước các tác động từ môi trường quốc tế.
+Key: 1
+Ask2: Trong một vụ việc gây rối trật tự công cộng, cơ quan chức năng đã áp dụng nhiều biện pháp nhằm ngăn chặn và xử lí. Hoạt động này thuộc nội dung nào?
+answer1: An ninh quốc gia.
+answer2: Bảo vệ an ninh quốc gia.
+answer3: Trật tự, an toàn xã hội.
+answer4: Bảo đảm trật tự, an toàn xã hội.
+Key: 4
+Ask3: Đảm bảo trật tự, an toàn xã hội không bao gồm hoạt động nào dưới đây?
+answer1: Giữ gìn trật tự công cộng và bảo đảm an toàn giao thông.
+answer2: Bảo vệ an ninh chính trị, tư tưởng và an ninh văn hoá.
+answer3: Phòng, chống thiên tai, dịch bệnh và các tệ nạn xã hội.
+answer4: Đấu tranh phòng, chống các hành vi vi phạm pháp luật.
+Key: 2
+Ask4: Nội dung nào dưới đây phản ánh đầy đủ và chính xác nhất bản chất của hoạt động bảo vệ an ninh quốc gia?
+answer1: Chủ động phòng ngừa từ sớm, kịp thời phát hiện, ngăn chặn và đấu tranh làm thất bại mọi hoạt động xâm phạm an ninh quốc gia.
+answer2: Chủ động phát hiện từ sớm, kịp thời ngăn chặn và đấu tranh làm thất bại các hoạt động xâm phạm an ninh quốc gia.
+answer3: Chủ động phòng ngừa từ sớm, kịp thời phát hiện và đấu tranh làm thất bại các hoạt động xâm phạm an ninh quốc gia.
+answer4: Chủ động phòng ngừa từ sớm, kịp thời phát hiện, ngăn chặn và xử lí các hoạt động xâm phạm an ninh quốc gia.
+Key: 1
+Ask5: Một trong những nội dung bảo vệ an ninh quốc gia là gì?
+answer1: Bảo vệ các đường dây thông tin.
+answer2: Bảo vệ an ninh thông tin.
+answer3: Bảo đảm thông tin thông suốt.
+answer4: Bảo đảm thông tin kịp thời, chính xác.
+Key: 2
+Ask6: Hành vi nào sau đây không thuộc hành vi xâm phạm an ninh quốc gia là:
+answer1: Xâm phạm chế độ chính trị, kinh tế, văn hóa của quốc gia
+answer2: Xâm phạm đến quyền lợi của giai cấp trong một quốc gia
+answer3: Xâm phạm an ninh, quốc phòng, đối ngoại của quốc gia
+answer4: Xâm phạm độc lập chủ quyền, thống nhất và toàn vẹn lãnh thổ của Tổ quốc
+Key: 2
+Ask7: Hoạt động nào sau đây không thuộc nội dung bảo vệ an ninh quốc gia?
+answer1: Bảo vệ an ninh chính trị và hệ thống chính quyền.
+answer2: Bảo vệ an ninh kinh tế và lợi ích quốc gia.
+answer3: Bảo vệ an ninh quốc phòng và chủ quyền lãnh thổ.
+answer4: Bảo vệ môi trường và tài nguyên thiên nhiên.
+Key: 4
+Ask8: Một xã hội trong đó mọi người sống ổn định, tuân thủ pháp luật và các chuẩn mực đạo đức được xác định là trạng thái nào dưới đây?
+answer1: An ninh quốc gia.
+answer2: Bảo vệ an ninh quốc gia.
+answer3: Trật tự, an toàn xã hội.
+answer4: Bảo đảm trật tự, an toàn xã hội.
+Key: 3
+Ask9: Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, cơ quan nào dưới đây có trách nhiệm: quyết định các vấn đề chiến tranh và hoà bình, quy định về tình trạng khẩn cấp, ban hành Hiến pháp, luật, nghị quyết…?
+answer1: Quốc hội.
+answer2: Chính phủ.
+answer3: Mặt trận Tổ quốc.
+answer4: Tòa án nhân dân tối cao.
+Key: 1
+Ask10: Em hãy điền từ đúng hoặc cụm từ đúng còn thiếu vào chỗ trống: “Bảo đảm trật tự, an toàn xã hội là phòng ngừa, phát hiện, ngăn chặn, đấu tranh chống tội phạm và ........ về trật tự, an toàn xã hội.”
+answer1: Các hành vi vi phạm đạo đức.
+answer2: Các hành vi gây rối trật tự.
+answer3: Các tệ nạn xã hội.
+answer4: Các hành vi vi phạm pháp luật.
+Key: 4
+Ask11: Lực lượng nào giữ vai trò nòng cốt trong việc bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội, bảo vệ Đảng, Nhà nước, chế độ và nhân dân; đấu tranh phòng, chống tội phạm và vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội?
+answer1: Các tổ chức xã hội.
+answer2: Dân quân tự vệ.
+answer3: Công an nhân dân.
+answer4: Quân đội nhân dân.
+Key: 3
+Ask12: “Tố cáo hành vi vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội; phát hiện, cung cấp kịp thời thông tin cho cơ quan có thẩm quyền” là trách nhiệm của?
+answer1: Quốc hội.
+answer2: Chính phủ.
+answer3: Lực lượng vũ trang.
+answer4: Công dân.
+Key: 4
+Ask13: Bạn K cho rằng: “Công dân không chỉ chấp hành pháp luật mà còn có trách nhiệm tổ chức thi hành pháp luật và quản lí xã hội.” Theo em, nhận định của bạn K chưa đúng ở nội dung nào dưới đây?
+answer1: Công dân cần chấp hành nghiêm chỉnh chủ trương của Đảng, chính sách, pháp luật của Nhà nước.
+answer2: Công dân có trách nhiệm tố cáo hành vi vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội.
+answer3: Công dân có thể phối hợp với cơ quan chức năng trong phòng, chống vi phạm pháp luật.
+answer4: Công dân không có trách nhiệm tổ chức thi hành pháp luật và quản lí xã hội.
+Key: 4
+Ask14: Nếu phát hiện bạn trong lớp có hành vi vi phạm pháp luật hoặc bị lôi kéo tham gia các hoạt động gây mất an ninh, trật tự, em sẽ làm gì để thực hiện đúng trách nhiệm của học sinh trong bảo vệ an ninh Tổ quốc?
+answer1: Tích cực học tập nâng cao kiến thức về Hiến pháp, pháp luật.
+answer2: Tích cực học tập, tham gia điều tra các hành vi vi phạm pháp luật
+answer3: Tích cực học tập, tham gia xây dựng sự nghiệp quốc phòng.
+answer4: Tích cực cùng Công an bảo vệ Hiến pháp, pháp luật.
+Key: 4
+Ask15: Khi phát hiện một nhóm người kích động biểu tình trái phép nhằm gây mất trật tự xã hội, em sẽ làm gì?
+answer1: Quan sát tình hình và giữ thái độ trung lập.
+answer2: Thông báo cho cơ quan chức năng để xử lí theo quy định.
+answer3: Tham gia biểu tình để thể hiện quan điểm cá nhân.
+answer4: Thuyết phục nhóm người tiếp tục biểu tình ôn hoà.
+Key: 2
+Ask16: Trong việc bảo vệ an ninh quốc gia và bảo đảm trật tự, an toàn xã hội, chủ thể nào dưới đây có trách nhiệm “đề ra đường lối, chính sách và phương pháp đấu tranh đúng đắn và lãnh đạo chặt chẽ bộ máy Nhà nước các đoàn thể quần chúng thực hiện thắng lợi đường lối chính sách đó”?
+answer1: Đảng Cộng sản Việt Nam.
+answer2: Nhà nước CHXHCN Việt Nam.
+answer3: Các tổ chức xã hội.
+answer4: Các cá nhân.
+Key: 1
+Ask17: Trong công tác bảo vệ an ninh quốc gia và đảm bảo trật tự an toàn xã hội, lực lượng vũ trang nhân dân giữ vai trò gì?
+answer1: Là lực lượng nòng cốt.
+answer2: Là lực lượng xung kích.
+answer3: Lãnh đạo trực tiếp về mọi mặt.
+answer4: Lực lượng lãnh đạo tuyệt đối về mọi mặt.
+Key: 1
+Ask18: Lợi dụng tình hình dịch Covid-19 đang diễn biến phức tạp, ông T và ông Q đã: tuyên truyền sai lệch chủ trương, đường lối chống dịch của Nhà nước; lôi kéo, xúi giục, kích động người dân trong thôn X chống đối lại chính quyền. Phát hiện hành vi vi phạm, anh M đã tố giác tới cơ quan công an. Nhân vật nào thể hiện đúng trách nhiệm?
+answer1: Ông T.
+answer2: Ông Q.
+answer3: Anh M.
+answer4: Ông T và ông Q.
+Key: 3
+Ask19: Trong khu dân cư X, lực lượng chức năng tăng cường tuần tra, xử lí các hành vi trộm cắp, gây rối trật tự công cộng và vi phạm an toàn giao thông nhằm giữ ổn định xã hội. Nội dung này phản ánh đúng bản chất nào của việc bảo đảm trật tự, an toàn xã hội?
+answer1: Phòng, chống tội phạm và vi phạm pháp luật về trật tự, an toàn xã hội.
+answer2: Phòng, chống tội phạm và các hành vi gây rối trật tự xã hội.
+answer3: Phòng, chống tội phạm và các tệ nạn xã hội trong cộng đồng.
+answer4: Phòng, chống tội phạm và các hành vi vi phạm chuẩn mực đạo đức xã hội.
+Key: 1
+Ask20: Lực lượng nào giữ vai trò nòng cốt trong việc bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội, bảo vệ Đảng, Nhà nước, chế độ và nhân dân; đấu tranh phòng, chống tội phạm và vi phạm pháp luật về an ninh quốc gia, trật tự, an toàn xã hội?
+answer1: Công an nhân dân.
+answer2: Quân đội nhân dân.
+answer3: Dân quân tự vệ.
+answer4: Các tổ chức xã hội.
+Key: 1
+Ask21: Khi phát hiện một số người trên mạng xã hội đăng tải thông tin sai lệch, gây hoang mang dư luận và ảnh hưởng đến an ninh trật tự, bạn H đã báo cho cơ quan chức năng và khuyên mọi người không chia sẻ thông tin đó. Hành động của H thể hiện nội dung nào dưới đây?
+answer1: Thực hiện trách nhiệm chấp hành chủ trương của Đảng, chính sách và pháp luật của Nhà nước trong bảo vệ an ninh, trật tự xã hội.
+answer2: Tham gia thực hiện các biện pháp nhằm bảo vệ an ninh chính trị nội bộ và giữ gìn sự ổn định của bộ máy nhà nước.
+answer3: Thực hiện quyền tham gia quản lí nhà nước và xã hội trong việc quyết định các vấn đề liên quan đến an ninh quốc gia.
+answer4: Thực hiện nhiệm vụ tổ chức thi hành Hiến pháp, pháp luật và nghị quyết của các cơ quan quyền lực nhà nước có thẩm quyền.
+Key: 1
+**II. BÀI 6 - MỘT SỐ HIỂU BIẾT VỀ AN NINH MẠNG**
+Ask22: Khái niệm "An ninh mạng" được xác định là trạng thái nào sau đây?
+answer1: Là sự bảo đảm hoạt động trên không gian mạng không gây phương hại đến an ninh quốc gia, trật tự an toàn xã hội.
+answer2: Là mạng lưới kết nối của cơ sở hạ tầng công nghệ thông tin gồm mạng viễn thông, mạng Internet, mạng máy tính.
+answer3: Là hệ thống các giải pháp kỹ thuật nhằm ngăn chặn các hành vi truy cập trái phép vào cơ sở dữ liệu của cá nhân.
+answer4: Là quá trình kiểm soát toàn bộ luồng thông tin trên môi trường điện tử nhằm phục vụ mục đích phát triển kinh tế.
+Key: 1
+Ask23: Điền từ/cụm từ vào chỗ trống trong khái niệm sau: “…….là mạng lưới kết nối của cơ sở hạ tầng công nghệ thông tin”.
+answer1: Mạng.
+answer2: Không gian mạng.
+answer3: An ninh mạng.
+answer4: Bảo vệ an ninh mạng.
+Key: 2
+Ask24: Nhận định nào dưới đây phản ánh đầy đủ nhất khái niệm “mạng”?
+answer1: Mạng là môi trường trong đó thông tin và dữ liệu có thể được cung cấp hoặc không, truyền đưa, xử lí, và trao đổi thông qua mạng viễn thông.
+answer2: Mạng là môi trường trong đó thông tin và dữ liệu được cung cấp, truyền đưa, thu thập, xử lí, lưu trữ và trao đổi thông qua mạng viễn thông và mạng máy tính.
+answer3: Mạng là môi trường trong đó thông tin được cung cấp, truyền đưa, thu thập, xử lí, lưu trữ và trao đổi thông qua mạng viễn thông và mạng máy tính.
+answer4: Mạng là môi trường trong đó dữ liệu được cung cấp, truyền đưa, thu thập, lưu trữ và trao đổi thông qua mạng máy tính.
+Key: 2
+Ask25: Hành vi nào dưới đây không bị nghiêm cấm thực hiện trên không gian mạng?
+answer1: Xúc phạm tôn giáo, phân biệt đối xử về giới, phân biệt chủng tộc.
+answer2: Phát tán chương trình tin học gây hại cho hoạt động của mạng viễn thông.
+answer3: Đăng tải thông tin dâm ô, đồi trụy, tội ác; phá hoại thuần phong mỹ tục của dân tộc.
+answer4: Đăng tải những thông tin, video clip quảng bá hình ảnh đẹp về đất nước Việt Nam.
+Key: 4
+Ask26: Điền từ/cụm từ vào chỗ trống trong khái niệm sau: “…….là mạng lưới kết nối của cơ sở hạ tầng công nghệ thông tin”.
+answer1: Mạng
+answer2: Không gian mạng.
+answer3: An ninh mạng.
+answer4: Bảo vệ an ninh mạng.
+Key: 2
+Ask27: Đâu không phải là nội dung của Luật An ninh mạng?
+answer1: Quy định về bảo vệ an ninh mạng đối với hệ thống thông tin quan trọng.
+answer2: Quy định trách nhiệm của cơ quan, tổ chức và cá nhân trong bảo vệ an ninh mạng.
+answer3: Quy định về phòng ngừa và xử lí hành vi xâm phạm an ninh mạng.
+answer4: Quy định chi tiết cách sử dụng và truy cập các mạng xã hội phổ biến.
+Key: 4
+Ask28: Hành vi nào dưới đây bị nghiêm cấm trên không gian mạng?
+answer1: Xuyên tạc lịch sử, phủ nhận thành quả cách mạng.
+answer2: Đăng tải các hình ảnh cá nhân lên mạng xã hội.
+answer3: Tra cứu, tìm kiếm thông tin, tư liệu trên Internet.
+answer4: Tương tác với người thân qua mạng xã hội.
+Key: 1
+Ask29: Nội dung nào dưới đây không phản ánh đúng quy tắc ứng xử chung trên mạng xã hội?
+answer1: An toàn, bảo mật thông tin.
+answer2: Tôn trọng, tuân thủ pháp luật.
+answer3: Lành mạnh, trách nhiệm.
+answer4: Phát tán thông tin giả.
+Key: 4
+Ask30: Trên không gian mạng, trẻ em có quyền?
+answer1: Được bảo vệ và tiếp cận thông tin phù hợp lứa tuổi.
+answer2: Được quyền tự do đăng tải mọi nội dung trên mạng.
+answer3: Được phép tham gia các hoạt động gây ảnh hưởng hệ thống mạng.
+answer4: Được quyền tổ chức các hoạt động kinh doanh trên mạng.
+Key: 1
+Ask31: Bạn nhận được một cuộc gọi từ người tự xưng là nhân viên công an, yêu cầu cung cấp số CCCD và mã OTP ngân hàng để "điều tra một vụ án". Bạn nên làm gì?
+answer1: Cung cấp thông tin theo yêu cầu vì tin tưởng cơ quan chức năng.
+answer2: Từ chối cung cấp và chủ động kiểm tra thông tin từ nguồn chính thống.
+answer3: Yêu cầu cung cấp thêm thông tin rồi cân nhắc trước khi trả lời.
+answer4: Ghi âm cuộc gọi và chia sẻ lên mạng xã hội để hỏi ý kiến.
+Key: 2
+Ask32: Tình huống: V và K là bạn thân. Do bất đồng nên K đã đăng tải lên Facebook những câu chuyện bí mật và thông tin cá nhân của V để chế giễu. Ai đã vi phạm luật an ninh mạng?
+answer1: Bạn V.
+answer2: Bạn K.
+answer3: Không có bạn nào vi phạm.
+answer4: Cả hai bạn K và V.
+Key: 2
+Ask33: Tình huống: H xâm nhập tài khoản mạng xã hội người khác, thay ảnh đại diện tổ chức khủng bố và soạn nội dung kích động. Chú P phát hiện, yêu cầu H chấm dứt và xin lỗi chủ tài khoản. Ai không vi phạm?
+answer1: Bạn H.
+answer2: Chú P.
+answer3: Cả bạn H và chú P.
+answer4: Không có nhân vật nào vi phạm.
+Key: 2
+Ask34: Thông tin cá nhân thuộc thông tin bí mật trên không gian mạng gồm?
+answer1: Hồ sơ y tế, hồ sơ nộp thuế, số thẻ tín dụng, số thẻ bảo hiểm xã hội.
+answer2: Họ tên khai sinh, ngày tháng năm sinh, địa chỉ thường trú, số điện thoại.
+answer3: Trình độ học vấn, quá trình đào tạo, các bằng cấp chuyên môn.
+answer4: Các quan điểm cá nhân, sở thích giải trí, địa chỉ thư điện tử.
+Key: 1
+Ask35: Một doanh nghiệp nước ngoài cung cấp dịch vụ trên không gian mạng tại Việt Nam nhưng không tuân thủ quy định của pháp luật Việt Nam. Theo Luật An ninh mạng, hành vi này vi phạm nghĩa vụ nào?
+answer1: Tuân thủ quy định của quốc gia nơi doanh nghiệp đặt trụ sở.
+answer2: Tuân thủ quy định pháp luật Việt Nam khi hoạt động tại Việt Nam.
+answer3: Tự do kinh doanh không bị ràng buộc bởi pháp luật.
+answer4: Chỉ cần tuân thủ các điều ước quốc tế.
+Key: 2
+Ask36: Nội dung nào dưới đây không thuộc thông tin cá nhân?
+answer1: Thông tin định danh cá nhân như họ tên, ngày sinh.
+answer2: Thông tin liên quan đến nghề nghiệp và quá trình công tác.
+answer3: Thông tin phản ánh sở thích cá nhân trong đời sống.
+answer4: Thông tin liên quan đến tài chính và các giao dịch cá nhân.
+Key: 3
+Ask37: Bạn H nhận được yêu cầu cài đặt ứng dụng “tăng tốc mạng” từ nguồn không rõ ràng khi dùng wifi miễn phí. H nên làm gì để bảo vệ thông tin?
+answer1: Kết nối Wi-Fi công cộng và thực hiện các giao dịch cá nhân như bình thường.
+answer2: Tải và cài đặt ứng dụng theo yêu cầu để tăng tốc độ truy cập mạng.
+answer3: Từ chối cài đặt ứng dụng, sử dụng phần mềm bảo mật và truy cập nguồn tin cậy.
+answer4: Đặt mật khẩu đơn giản để thuận tiện cho việc đăng nhập khi sử dụng mạng.
+Key: 3
+Ask38: Thông tin đủ để xác định chính xác danh tính một cá nhân được gọi là?
+answer1: Thông tin an ninh.
+answer2: Bí mật quốc phòng.
+answer3: Bí mật quốc gia.
+answer4: Thông tin cá nhân.
+Key: 4
+Ask39: Chúng ta cần làm gì để bảo mật thông tin cá nhân trên không gian mạng?
+answer1: Thường xuyên nâng cấp, cập nhật các phần mềm, hệ điều hành.
+answer2: Đặt mật khẩu cá nhân có cấu trúc đơn giản, dễ dàng ghi nhớ.
+answer3: Sử dụng Wi-Fi công cộng để thực hiện các giao dịch cần bảo mật.
+answer4: Thường xuyên chia sẻ thông tin cá nhân trên không gian mạng.
+Key: 1
+Ask40: Trong một vụ trộm cắp, người dân đã cung cấp thông tin giúp công an bắt giữ đối tượng. Điều này thể hiện điều gì?
+answer1: Người dân muốn được cơ quan chức năng khen thưởng về vật chất.
+answer2: Công tác phòng, chống tội phạm chỉ là nhiệm vụ của Công an.
+answer3: Sức mạnh tổng hợp của toàn xã hội trong đấu tranh phòng chống tội phạm.
+answer4: Người dân có nghĩa vụ dũng cảm bắt giữ tội phạm.
+Key: 3
+Ask41: Để tránh camera an ninh bị kẻ xấu xâm nhập, gia đình Lan nên thực hiện biện pháp bảo mật nào?
+answer1: Thay đổi ngay mật khẩu mặc định bằng một mật khẩu dễ nhớ.
+answer2: Thay đổi ngay mật khẩu mặc định bằng một mật khẩu mạnh và phức tạp.
+answer3: Chia sẻ hình ảnh từ camera lên mạng xã hội cho mọi người cùng xem.
+answer4: Đặt camera ở vị trí khuất, khó nhìn thấy.
+Key: 2
+**III. BÀI 11: THƯỜNG THỨC PHÒNG TRÁNH VŨ KHÍ, THIÊN TAI, DỊCH BỆNH VÀ CHÁY NỔ**
+Ask42: Vũ khí công nghệ cao không có đặc điểm nào dưới đây?
+answer1: Có độ chính xác cao, tầm hoạt động xa.
+answer2: Uy lực sát thương nhỏ hơn so với vũ khí thông thường.
+answer3: Có thể hoạt động trong điều kiện nhiễu, thời tiết phức tạp.
+answer4: Có sự nhảy vọt về chất lượng, tính năng kĩ - chiến thuật.
+Key: 2
+Ask43: Đạn được hiểu là?
+answer1: Thiết bị nổ có sức công phá lớn, huỷ diệt sự sống, gây thiệt hại về người, tài sản.
+answer2: Vũ khí trên bộ, dưới nước nhằm tiêu diệt sinh lực và phương tiện của đối phương.
+answer3: Vật thể mang phần tử sát thương sinh lực địch, phá hủy phương tiện của đối phương.
+answer4: Vũ khí dựa trên đặc tính gây độc cao và tác dụng nhanh của các chất độc quân sự.
+Key: 3
+Ask44: Vũ khí công nghệ cao được hiểu là?
+answer1: Vũ khí dựa trên đặc tính gây độc cao và tác dụng nhanh của các chất độc quân sự.
+answer2: Những tác nhân sinh học sử dụng vào mục đích quân sự để gây hại cho đối phương.
+answer3: Loại vũ khí được nghiên cứu dựa trên thành tựu cách mạng khoa học - công nghệ.
+answer4: Vật thể mang phần tử sát thương sinh lực địch, phá hủy phương tiện của đối phương.
+Key: 3
+Ask45: Vũ khí sinh học không có đặc điểm nào dưới đây?
+answer1: Lan truyền bằng nhiều con đường.
+answer2: Phạm vi sát thương lớn, thời gian tác hại dài.
+answer3: Khó phát hiện, phòng chống và khắc phục hiệu quả.
+answer4: Chỉ lan truyền trong phạm vi nhỏ với liều lượng lớn.
+Key: 4
+Ask46: "Thiết bị nổ có sức công phá lớn, hủy diệt sự sống, gây thiệt hại vô cùng to lớn về người và tài sản" là định nghĩa của?
+answer1: Mìn.
+answer2: Đạn.
+answer3: Bom.
+answer4: Vũ khí công nghệ cao.
+Key: 3
+Ask47: Bom được hiểu là?
+answer1: Thiết bị nổ có sức công phá lớn, hủy diệt sự sống, gây thiệt hại về người, tài sản.
+answer2: Vũ khí trên bộ, dưới nước nhằm tiêu diệt sinh lực và phương tiện của đối phương.
+answer3: Vật thể mang phần tử sát thương sinh lực địch, phá hủy phương tiện của đối phương.
+answer4: Vũ khí dựa trên đặc tính gây độc cao và tác dụng nhanh của các chất độc quân sự.
+Key: 1
+Ask48: Khi phát hiện khu vực có biển cảnh báo bom, mìn nhưng có người vẫn cố tình tiếp cận, cách xử lí nào là phù hợp nhất?
+answer1: Tránh xa khu vực và mặc kệ vì không liên quan.
+answer2: Tiếp cận để kiểm tra và cảnh báo trực tiếp.
+answer3: Thông báo cho cơ quan chức năng và cảnh báo người xung quanh.
+answer4: Tổ chức ngăn cản bằng cách tiếp cận khu vực nguy hiểm.
+Key: 3
+Ask49: Thiên tai là gì?
+answer1: Là hiện tượng tự nhiên bất thường có thể gây thiệt hại về người, tài sản, môi trường và các hoạt động kinh tế- xã hội.
+answer2: Là hiện tượng do con người gây thiệt hại về người, tài sản, môi trường và các hoạt động kinh tế- xã hội.
+answer3: Là hiện tượng tự nhiên xảy ra có quy luật gây thiệt hại về người, tài sản, môi trường và các hoạt động kinh tế- xã hội.
+answer4: Là hiện tượng do con người gây ra chỉ gây thiệt hại về tài sản, môi trường .
+Key: 1
+Ask50: Hiện tượng tự nhiên bất thường có thể gây thiệt hại về người, tài sản, môi trường, điều kiện sống và các hoạt động kinh tế - xã hội được gọi là?
+answer1: Dịch bệnh.
+answer2: Địch họa.
+answer3: Thiên tai.
+answer4: Biến đổi khí hậu.
+Key: 3
+Ask51: Hiện tượng tự nhiên nào dưới đây không được coi là thiên tai?
+answer1: Bão.
+answer2: Sét.
+answer3: Mưa phùn.
+answer4: Hạn hán.
+Key: 3
+Ask52: Hiện tượng nào dưới đây là thiên tai?
+answer1: Cháy rừng.
+answer2: Động đất.
+answer3: Ô nhiễm môi trường.
+answer4: Chặt phá rừng.
+Key: 2
+Ask53: Để bảo vệ bản thân và gia đình trước khi bão xảy ra, cần thực hiện các biện pháp phòng tránh nào?
+answer1: Gia cố nhà cửa, dự trữ lương thực, nước uống, thuốc men cần thiết.
+answer2: Chuẩn bị một số vật dụng cần thiết để ứng phó với bão.
+answer3: Dự trữ lương thực, nước uống và thuốc men để sử dụng trước thời gian bão.
+answer4: Chưa chuẩn bị nhu yếu phẩm cần thiết và chờ hướng dẫn từ cơ quan chức năng.
+Key: 1
+Ask54: Chúng ta cần phải nhận biết các loại thiên tai để?
+answer1: Nghiên cứu những thiệt hại do thiên tai gây ra.
+answer2: Khắc phục triệt để sự cố do thiên tai gây ra.
+answer3: Đề ra biện pháp ứng phó khi thiên tai xảy ra.
+answer4: Chủ động phòng, tránh và khắc phục hậu quả.
+Key: 4
+Ask55: Trong một xã, số ca mắc một bệnh truyền nhiễm tăng nhanh bất thường vượt xa số ca mắc trung bình hằng năm. Hiện tượng này gọi là gì?
+answer1: Sự bùng phát bệnh truyền nhiễm vượt mức bình thường trong một khu vực và thời gian xác định.
+answer2: Tình trạng xuất hiện bệnh truyền nhiễm với số ca mắc phổ biến trong cộng đồng tại một địa phương.
+answer3: Hiện tượng gia tăng số ca mắc bệnh truyền nhiễm theo quy luật chu kỳ tự nhiên trong năm tại địa phương.
+answer4: Quá trình lây lan của một loại bệnh truyền nhiễm cụ thể trong phạm vi không gian và thời gian nhất định
+Key: 1
+Ask56: Nội dung nào dưới đây không phản ánh đúng biện pháp phòng, chống dịch bệnh truyền nhiễm?
+answer1: Khuyến khích tụ tập đông người để kiểm soát dịch bệnh.
+answer2: Giám sát chặt chẽ các trường hợp có nguy cơ mắc bệnh.
+answer3: Theo dõi tác nhân gây bệnh và nguồn lây nhiễm.
+answer4: Thực hiện cách li và khử khuẩn khu vực có dịch.
+Key: 1
+Ask57: “Là sự xuất hiện bệnh truyền nhiễm với số người mắc bệnh vượt quá số người mắc bệnh dự tính bình thường trong một khoảng thời gian xác định ở một khu vực nhất định” - đó là nội dung của khái niệm nào?
+answer1: Dịch bệnh.
+answer2: Thiên tai.
+answer3: Bệnh truyền nhiễm.
+answer4: Bệnh Covid.
+Key: 1
+Ask58: Bệnh nào dưới đây là bệnh dịch truyền nhiễm?
+answer1: Bệnh đau xương khớp.
+answer2: Bệnh cúm A-H5N1.
+answer3: Bệnh máu trắng.
+answer4: Bệnh sâu răng.
+Key: 2
+Ask59: Khi phát hiện một người bị tai nạn giao thông nghiêm trọng cần được can thiệp y tế khẩn cấp, em nên gọi đến số nào?
+answer1: 112
+answer2: 115
+answer3: 113
+answer4: 114
+Key: 2
+Ask60: Khi xảy ra hỏa hoạn, cháy nổ, chúng ta gọi điện đến số điện thoại khẩn cấp nào dưới đây để được hỗ trợ?
+answer1: 112
+answer2: 111
+answer3: 113
+answer4: 114
+Key: 4
+Ask61: Khi đang ở trong siêu thị xảy ra cháy, hệ thống điện chưa ngắt và đám cháy lan rộng, phương án xử lí nào tối ưu nhất?
+answer1: Hô hoán và nhanh chóng rời khỏi khu vực cháy.
+answer2: Tiếp cận đám cháy để dập lửa ngay lập tức.
+answer3: Gọi điện báo cháy và chờ lực lượng chức năng đến.
+answer4: Báo động, ngắt điện, sử dụng phương tiện chữa cháy.
+Key: 4
+Ask62: Khi phát hiện một đám cháy do dầu hoặc chất lỏng dễ cháy, bạn nên sử dụng phương pháp nào để dập tắt?
+answer1: Dùng nước để dập tắt đám cháy.
+answer2: Sử dụng bình chữa cháy.
+answer3: Dùng vải ướt để phủ lên đám cháy.
+answer4: Để đám cháy tự tắt vì dầu không thể dập bằng nước.
+Key: 2
