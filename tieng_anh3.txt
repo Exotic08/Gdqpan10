@@ -10,7 +10,7 @@ answer1: access
 answer2: affect
 answer3: application
 answer4: fact
-Key: 2
+Key: 4
 
 Ask3: Chọn từ có phần gạch chân/trọng âm khác với các từ còn lại:
 answer1: public
@@ -75,21 +75,21 @@ answer3: monument
 answer4: wonder
 Key: 1
 
-Ask12: J.K. Rowling's first book ________ when she was only 6 years old.
+Ask12: KHÔNG ƯU TIÊN: J.K. Rowling's first book ________ when she was only 6 years old.
 answer1: wrote
 answer2: is written
 answer3: was written
 answer4: is writting
 Key: 3
 
-Ask13: The whole chocolate cake ________ by my sister last evening because she was too hungry.
+Ask13: KHÔNG ƯU TIÊN: The whole chocolate cake ________ by my sister last evening because she was too hungry.
 answer1: were eaten
 answer2: being eaten
 answer3: have eaten
 answer4: was eaten
 Key: 4
 
-Ask14: We ________ Niagara Falls while we ________ our summer holiday in America.
+Ask14: KHÔNG ƯU TIÊN: We ________ Niagara Falls while we ________ our summer holiday in America.
 answer1: have visited/ spent
 answer2: visited/ were spending
 answer3: visit/spend
@@ -140,7 +140,7 @@ Ask22: Chia từ trong ngoặc (PARTICIPATE): Viet Nam has become an active ____
 Type: short
 Key: participant
 
-Ask23: Viết lại câu (dùng While): "He called me. I was taking a shower in the bathroom."
+Ask23: KHÔNG ƯU TIÊN: Viết lại câu (dùng While): "He called me. I was taking a shower in the bathroom."
 Type: short
 Key: While I was taking a shower in the bathroom, he called me.
 
