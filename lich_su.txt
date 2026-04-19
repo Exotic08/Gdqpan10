@@ -334,7 +334,7 @@ answer3: Mỗi dân tộc sống biệt lập ở một tỉnh riêng.
 answer4: Chỉ tập trung sinh sống ở khu vực Tây Nguyên.
 Key: 2
 
-Ask49: Đọc đoạn tư liệu và CHỌN CÁC Ý ĐÚNG: “Nền giáo dục Nho học ở Đại Việt phát triển mạnh từ thời Lý – Trần, đặc biệt dưới thời Lê sơ với hệ thống khoa cử hoàn chỉnh, góp phần đào tạo đội ngũ quan lại và trí thức cho bộ máy nhà nước.”
+Ask49: Đọc đoạn tư liệu sau và CHỌN CÁC Ý ĐÚNG: “Nền giáo dục Nho học ở Đại Việt phát triển mạnh từ thời Lý – Trần, đặc biệt dưới thời Lê sơ với hệ thống khoa cử hoàn chỉnh, góp phần đào tạo đội ngũ quan lại và trí thức cho bộ máy nhà nước.”
 answer1: a) Giáo dục Nho học ở Đại Việt phát triển mạnh từ thời Lý – Trần.
 answer2: b) Hệ thống khoa cử dưới thời Lê sơ chưa hoàn chỉnh.
 answer3: c) Sự phát triển của giáo dục và khoa cử góp phần xây dựng đội ngũ quan lại cho nhà nước.
@@ -342,15 +342,15 @@ answer4: d) Giáo dục Nho học phát triển mạnh làm cho các lĩnh vực
 Type: multi
 Key: 1,0,1,0
 
-Ask50: Đọc đoạn tư liệu và CHỌN CÁC Ý ĐÚNG: "Với 54 dân tộc ở Việt Nam, có 4 dân tộc là Kinh (Việt), Hoa, Chăm và Khmer có truyền thống sống ở vùng đồng bằng... Một trong những đặc điểm cư trú nổi bật của các dân tộc ở Việt Nam là sự xen cư. Việc xen cư đã diễn ra từ lâu đời và đặc biệt phát triển trong những thập kỉ gần đây..."
+Ask50: Đọc đoạn tư liệu sau và CHỌN CÁC Ý ĐÚNG: "Với 54 dân tộc ở Việt Nam, có 4 dân tộc là Kinh (Việt), Hoa, Chăm và Khmer có truyền thống sống ở vùng đồng bằng. Trong số này, các dân tộc Kinh (Việt), Chăm, Khmer vốn là cư dân nông nghiệp trồng lúa nước, còn người Hoa thường sống bằng nghề tiểu thủ công và kinh doanh buôn bán ở khu vực đô thị. 50 dân tộc còn lại chủ yếu sinh sống ở các vùng miền núi và trung du,... Một trong những đặc điểm cư trú nổi bật của các dân tộc ở Việt Nam là sự xen cư. Việc xen cư đã diễn ra từ lâu đời và đặc biệt phát triển trong những thập kỉ gần đây, dưới tác động của các yếu tố di cư, giao lưu tiếp xúc văn hóa, ngôn ngữ, hôn nhân hỗn hợp dân tộc, kinh tế thị trường."
 answer1: a) Việt Nam có 54 dân tộc anh em, trong đó có 4 dân tộc Kinh, Hoa, Chăm và Khmer thuộc nhóm dân tộc đa số.
 answer2: b) Địa bàn cư trú của 4 dân tộc Kinh, Hoa, Chăm và Khmer có sự khác biệt so với địa bàn cư trú của các dân tộc còn lại trên lãnh thổ Việt Nam.
 answer3: c) Trong những thập kỉ gần đây, do sự tác động của nhiều yếu tố, việc cư trú đan xen giữa các dân tộc đã bắt đầu xuất hiện và phát triển.
-answer4: d) Bản chất của việc cư trú đan xen hiện nay là sự chuyển đổi địa bàn sinh sống giữa các dân tộc sinh sống ở đồng bằng với các dân tộc sinh sống ở khu vực trung du, miền núi.
+answer4: d) Bản chất của việc cư trú đan xen hiện nay là sự chuyển đổi địa bàn sinh sống giữa các dân tộc sinh sống ở đồng bằng với các dân tộc sinh sống ở khu vực trong du, miền núi.
 Type: multi
 Key: 0,1,0,0
 
-Ask51: Đọc đoạn tư liệu và CHỌN CÁC Ý ĐÚNG: “Phù Nam là một trong những quốc gia cổ sớm ở Đông Nam Á, phát triển mạnh nhờ vị trí nằm trên các tuyến giao thương quốc tế. Nền kinh tế kết hợp giữa nông nghiệp, thủ công nghiệp và thương mại."
+Ask51: Đọc đoạn tư liệu sau và CHỌN CÁC Ý ĐÚNG: “Phù Nam là một trong những quốc gia cổ sớm ở Đông Nam Á, phát triển mạnh nhờ vị trí nằm trên các tuyến giao thương quốc tế. Nền kinh tế kết hợp giữa nông nghiệp, thủ công nghiệp và thương mại."
 answer1: a) Phù Nam là một quốc gia cổ hình thành sớm ở Đông Nam Á.
 answer2: b) Kinh tế Phù Nam chỉ dựa vào nông nghiệp, không có vai trò của thương mại.
 answer3: c) Vị trí địa lí thuận lợi giúp Phù Nam trở thành trung tâm giao thương quan trọng.
@@ -358,7 +358,7 @@ answer4: d) Sự phát triển của Phù Nam hoàn toàn không phụ thuộc v
 Type: multi
 Key: 1,0,1,0
 
-Ask52: Đọc đoạn tư liệu và CHỌN CÁC Ý ĐÚNG: “Kiến trúc và nghệ thuật Đại Việt đạt nhiều thành tựu tiêu biểu như chùa Một Cột, tháp Phổ Minh; cùng với đó là những tiến bộ trong kỹ thuật quân sự và thủ công nghiệp, phản ánh trình độ phát triển của xã hội.”
+Ask52: Đọc đoạn tư liệu sau và CHỌN CÁC Ý ĐÚNG: “Kiến trúc và nghệ thuật Đại Việt đạt nhiều thành tựu tiêu biểu như chùa Một Cột, tháp Phổ Minh; cùng với đó là những tiến bộ trong kỹ thuật quân sự và thủ công nghiệp, phản ánh trình độ phát triển của xã hội.”
 answer1: a) Chùa Một Cột và tháp Phổ Minh là những công trình kiến trúc tiêu biểu của Đại Việt.
 answer2: b) Thành tựu kiến trúc của Đại Việt không phản ánh trình độ phát triển của xã hội.
 answer3: c) Sự phát triển của thủ công nghiệp và kỹ thuật quân sự góp phần nâng cao sức mạnh quốc gia.
@@ -366,7 +366,7 @@ answer4: d) Thành tựu kiến trúc Đại Việt chỉ mang yếu tố bản 
 Type: multi
 Key: 1,0,1,0
 
-Ask53: Đọc đoạn tư liệu và CHỌN CÁC Ý ĐÚNG: “Hình thành trên một không gian tương đối rộng lớn với cả ba vùng cảnh quan... các di tích văn hóa Chăm tìm được ở miền Trung trải dọc từ Quảng Bình ở phía bắc đến Ninh Thuận, Bình Thuận, Đồng Nai ở phía nam. Dấu tích văn hóa Chăm còn được phát hiện trên vùng cao nguyên hiện nay như các tỉnh: Gia Lai, Kon Tum, Đắk Lắk, Lâm Đồng..."
+Ask53: Đọc đoạn tư liệu sau và CHỌN CÁC Ý ĐÚNG: “Hình thành trên một không gian tương đối rộng lớn với cả ba vùng cảnh quan đồng thời là ba không gian sinh thái tự nhiên: núi rừng, châu thổ và duyên hải, các di tích văn hóa Chăm tìm được ở miền Trung trải dọc từ Quảng Bình (di tích Cao Lao Hạ) ở phía bắc đến Ninh Thuận, Bình Thuận, Đồng Nai ở phía nam. Trong các vòng tiếp giao xã hội và văn hóa rộng lớn đó, dấu tích văn hóa Chăm còn được phát hiện trên vùng cao nguyên hiện nay như các tỉnh: Gia Lai, Kon Tum, Đắk Lắk, Lâm Đồng,..."
 answer1: a) Theo đoạn tư liệu, vương quốc Chăm-pa là một quốc gia rộng lớn có lãnh thổ trải rộng từ Quảng Ninh đến Đồng Nai.
 answer2: b) Việc di tích văn hoá Chăm-pa phân bố ở cả rừng núi, châu thổ và duyên hải cho thấy nền văn hoá này có sự thích ứng linh hoạt với nhiều không gian sinh thái khác nhau.
 answer3: c) Trong lịch sử khu vực, văn hóa Chăm phát triển trong bối cảnh giao lưu xã hội và văn hoá rộng lớn.
@@ -374,7 +374,7 @@ answer4: d) Hiện nay, các di tích văn hóa Chăm chỉ được tìm thấy
 Type: multi
 Key: 0,1,1,0
 
-Ask54: Đọc đoạn tư liệu và CHỌN CÁC Ý ĐÚNG: “Nhâm Ngọ, năm thứ tư [1042]... Ban Hình thư... Vua lấy làm thương xót, sai Trung tư san định luật lệnh, châm chước cho thích dụng với thời thế, chia ra môn loại, biên thành điều khoản, làm thành sách “Hình thư” của một triều đại, để cho người xem dễ hiểu. Sách làm xong, xuống chiếu ban hành, dân lấy làm tiện”.
+Ask54: Đọc đoạn tư liệu sau và CHỌN CÁC Ý ĐÚNG: “Nhâm Ngọ, năm thứ tư [1042]... Ban Hình thư. Trước kia, việc kiện tụng trong nước phiền nhiễu, quan lại giữ luật pháp câu nệ luật văn, cốt làm cho khắc nghiệt, thậm chí có người bị oan uổng quá đáng. Vua lấy làm thương xót, sai Trung tư san định luật lệnh, châm chước cho thích dụng với thời thế, chia ra môn loại, biên thành điều khoản, làm thành sách “Hình thư” của một triều đại, để cho người xem dễ hiểu. Sách làm xong, xuống chiếu ban hành, dân lấy làm tiện”.
 answer1: a) Theo đoạn tư liệu, luật Hình thư ra đời để thích ứng với thời thế và để cho dân dễ hiểu.
 answer2: b) Bộ luật Hình thư được ban hành vào thế kỉ XI dưới thời vương triều Trần.
 answer3: c) Việc ban hành luật Hình thư cho thấy triều đình chú trọng xây dựng nhà nước pháp quyền và coi trọng quyền lợi của nhân dân.
@@ -382,7 +382,7 @@ answer4: d) Hình thư là bộ luật thành văn đầu tiên của nước ta
 Type: multi
 Key: 1,0,1,0
 
-Ask55: Dựa vào bảng sự kiện về thành tựu đời sống vật chất, tinh thần của các dân tộc Việt Nam, CHỌN CÁC Ý ĐÚNG:
+Ask55: Đọc thông tin sau và CHỌN CÁC Ý ĐÚNG: Bảng sự kiện về một số thành tựu đời sống vật chất, đời sống tinh thần của cộng đồng các dân tộc Việt Nam (Dân tộc Kinh: Phát triển các nghề thủ công gốm, dệt, đúc đồng, rèn sắt...; Trang phục áo dài. Các dân tộc thiểu số: Lễ hội Cồng chiêng, Cầu mùa...; Nghề dệt thổ cẩm, làm mộc...)
 answer1: a) Bảng trên cho thấy các nghề thủ công cổ truyền của các dân tộc Việt Nam tiếp tục phát triển.
 answer2: b) Các phong tục, tập quán của cộng đồng các dân tộc Việt Nam đa dạng, phong phú.
 answer3: c) Các làng nghề thủ công cổ truyền của dân tộc Kinh ngày nay đã không còn.
