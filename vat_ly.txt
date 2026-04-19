@@ -143,7 +143,7 @@ answer1: w = 2π/T
 answer2: w = 2π/f
 answer3: T = w.f
 answer4: T = 1/f^2
-Key: 3
+Key: 1
 
 Ask22: Trong chuyển động tròn đều:
 answer1: vectơ vận tốc luôn không đổi, do đó gia tốc bằng 0.
