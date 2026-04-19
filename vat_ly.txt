@@ -141,7 +141,7 @@ Key: 3
 Ask21: Một vật chuyển động tròn đều với chu kì T, tần số góc ω, số vòng mà vật đi được trong một giây là f. Hệ thức nào sau đây là đúng?
 answer1: w = 2π/T
 answer2: w = 2π/f
-answer3: w = 2πf
+answer3: T = w.f
 answer4: T = 1/f^2
 Key: 3
 
