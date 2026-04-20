@@ -1,0 +1,260 @@
+Ask1: Cho đường thẳng ∆: {x = 1 + 2t; y = 3 - t}. Vectơ nào dưới đây là vectơ chỉ phương của đường thẳng ∆?
+answer1: u1 = (1; 3)
+answer2: u2 = (2; 0)
+answer3: u3 = (2; 1)
+answer4: u4 = (2; -1)
+Key: 4
+
+Ask2: Trong mặt phẳng Oxy, cho đường thẳng d: 2x - 3y + 1 = 0. Một vectơ pháp tuyến của đường thẳng d là:
+answer1: n = (2; -3)
+answer2: n = (3; 2)
+answer3: n = (3; -2)
+answer4: n = (2; 3)
+Key: 1
+
+Ask3: Xác định vị trí tương đối của hai đường thẳng d1: 2x - y + 1 = 0 và d2: -4x + 2y + 2 = 0.
+answer1: Cắt nhau
+answer2: Vuông góc nhau
+answer3: Trùng nhau
+answer4: Song song nhau
+Key: 4
+
+Ask4: Xét vị trí tương đối của hai đường thẳng d1: x + y - 4 = 0 và d2: -2x - 2y + 6 = 0.
+answer1: Trùng nhau
+answer2: Song song
+answer3: Vuông góc
+answer4: Cắt nhau nhưng không vuông góc
+Key: 2
+
+Ask5: Tâm của đường tròn (C) có phương trình (x - 3)^2 + (y + 4)^2 = 12 là:
+answer1: I(3; -4)
+answer2: I(3; 4)
+answer3: I(-3; 4)
+answer4: I(4; 3)
+Key: 1
+
+Ask6: Cho đường tròn (C): (x + 5)^2 + (y - 4)^2 = 16. Tọa độ tâm I và bán kính R là:
+answer1: I(5; -4); R = 16
+answer2: I(-5; 4); R = 16
+answer3: I(-5; 4); R = 4
+answer4: I(5; -4); R = 4
+Key: 3
+
+Ask7: Cho hypebol có phương trình chính tắc x^2/16 - y^2/9 = 1. Tìm tiêu cự của hypebol.
+answer1: 2c = 10
+answer2: 2c = 5
+answer3: 2c = 2√7
+answer4: 2c = √7
+Key: 1
+
+Ask8: Trong mặt phẳng Oxy, cho elip (E): x^2/36 + y^2/16 = 1. Tiêu cự của elip bằng:
+answer1: F1F2 = 12
+answer2: F1F2 = 8
+answer3: F1F2 = 2√5
+answer4: F1F2 = 4√5
+Key: 4
+
+Ask9: Từ A đến B có 4 con đường, từ B đến C có 3 con đường. Có bao nhiêu cách chọn đường từ A đến C qua B?
+answer1: 64
+answer2: 81
+answer3: 12
+answer4: 7
+Key: 3
+
+Ask10: Có 3 kiểu mặt đồng hồ và 4 kiểu dây. Có bao nhiêu cách chọn một chiếc đồng hồ gồm một mặt và một dây?
+answer1: 4
+answer2: 7
+answer3: 12
+answer4: 16
+Key: 3
+
+Ask11: Tính số chỉnh hợp chập 3 của 7 phần tử (A7,3).
+answer1: 2187
+answer2: 210
+answer3: 35
+answer4: 5040
+Key: 2
+
+Ask12: Tính số các hoán vị của 4 phần tử (P4).
+answer1: 24
+answer2: 12
+answer3: 4
+answer4: 48
+Key: 1
+
+Ask13: Số cách sắp xếp 10 bạn học sinh thành một hàng dọc là:
+answer1: 10^10
+answer2: 10!
+answer3: 1
+answer4: 10
+Key: 2
+
+Ask14: Số cách sắp xếp 8 học sinh thành một hàng ngang là:
+answer1: 8!
+answer2: 1
+answer3: 8
+answer4: 8^8
+Key: 1
+
+Ask15: Chọn 1 ban cán sự gồm 1 lớp trưởng, 1 lớp phó và 1 bí thư từ 10 học sinh giỏi. Số cách chọn là:
+answer1: C(3, 10)
+answer2: A(3, 10)
+answer3: P3
+answer4: 10^3
+Key: 2
+
+Ask16: Có thể tạo thành bao nhiêu véc-tơ khác vectơ không từ mười điểm phân biệt?
+answer1: 10!
+answer2: C(2, 10)
+answer3: 10
+answer4: A(2, 10)
+Key: 4
+
+Ask17: Hệ số của x^3 trong khai triển T = (2x + 3)^5 là?
+answer1: 10
+answer2: 1080
+answer3: 720
+answer4: 72
+Key: 3
+
+Ask18: Đa thức P(x) = 32x^5 - 80x^4 + 80x^3 - 40x^2 + 10x - 1 là khai triển của nhị thức:
+answer1: (1 - 2x)^5
+answer2: (1 + 2x)^5
+answer3: (2x - 1)^5
+answer4: (x - 1)^5
+Key: 3
+
+Ask19: Một hộp có 5 tấm thẻ đánh số từ 1 đến 5. Lấy ngẫu nhiên 2 thẻ. Số phần tử không gian mẫu là:
+answer1: 20
+answer2: 10
+answer3: 2
+answer4: 120
+Key: 2
+
+Ask20: Gieo một đồng xu 3 lần. Tập hợp mô tả biến cố “Mặt sấp xuất hiện đúng 2 lần" là:
+answer1: {SSN, SNS, NSS}
+answer2: {SSN, SNS, NSN}
+answer3: {SSS, SSN, SNS, SNN, NNS, NSN, NSS}
+answer4: {SSN, SSS, SNS, NSS}
+Key: 1
+
+Ask21: Gieo ngẫu nhiên một con xúc xắc. Biến cố “Xuất hiện mặt có số chấm không nhỏ hơn 5" có bao nhiêu phần tử?
+answer1: 1
+answer2: 2
+answer3: 3
+answer4: 4
+Key: 2
+
+Ask22: Gieo một con xúc sắc. Xác suất để mặt chấm chẵn xuất hiện là:
+answer1: 0.2
+answer2: 0.3
+answer3: 0.4
+answer4: 0.5
+Key: 4
+
+Ask23: Lớp có 13 nam và 12 nữ. Chọn ra 2 em trực nhật. Xác suất để 2 em được chọn đều là nam là:
+answer1: 50/13
+answer2: 11/50
+answer3: 13/50
+answer4: 50/11
+Key: 3
+
+Ask24: Có 5 Toán, 4 Lý, 3 Hóa. Lấy ngẫu nhiên 3 quyển. Xác suất để 3 quyển thuộc 3 môn khác nhau là:
+answer1: 8/11
+answer2: 3/11
+answer3: 1/110
+answer4: 109/110
+Key: 2
+
+Ask25: Một xạ thủ bắn 30 viên đạn. Điểm số trung bình cộng là (làm tròn hàng phần trăm):
+answer1: 8.33
+answer2: 8.34
+answer3: 8.31
+answer4: 8.32
+Key: 1
+
+Ask26: Cho dãy số liệu: 5; 6; 7; 8; 9. Phương sai của dãy số liệu là:
+answer1: 10
+answer2: 7
+answer3: 6
+answer4: 2
+Key: 4
+
+Ask27: Có 100 học sinh thi HSG Toán. Tính độ lệch chuẩn (làm tròn hàng phần trăm).
+answer1: 4.67
+answer2: 2.16
+answer3: 4.70
+answer4: 2.17
+Key: 4
+
+Ask28: CHỌN CÁC Ý ĐÚNG về đường tròn (C): x^2 + y^2 - 2x + 4y + 1 = 0 và d: x + y - 1 = 0.
+answer1: a) Tâm của đường tròn là I(1; -2)
+answer2: b) Phương trình tiếp tuyến tại A(1; 0) là (∆): y - 1 = 0
+answer3: c) Khoảng cách từ tâm I đến đường thẳng (d) bằng √2
+answer4: d) Đường tròn (C) cắt đường thẳng (d) tại 2 điểm M, N với MN = √2
+Type: multi
+Key: 1,0,1,0
+
+Ask29: CHỌN CÁC Ý ĐÚNG về đường tròn (C) có tâm I thuộc x - 2y + 5 = 0 và qua A(0; 4), B(2; 6).
+answer1: a) Tọa độ tâm I(5; 0)
+answer2: b) Đường kính của đường tròn (C) bằng √(50/9)
+answer3: c) Đường tròn (C) đi qua điểm N(4; 2)
+answer4: d) Độ dài đoạn IO = √170/3
+Type: multi
+Key: 0,0,0,0
+
+Ask30: CHỌN CÁC Ý ĐÚNG: Đội văn nghệ gồm 4 HS lớp 12A, 3 HS lớp 12B, 2 HS lớp 12C. Chọn ngẫu nhiên 5 HS.
+answer1: a) Chọn 5 học sinh tùy ý từ 9 học sinh có: 120 cách
+answer2: b) Chọn 5 học sinh chỉ có lớp 12A và 12B có: 21 cách
+answer3: c) Chọn 5 học sinh chỉ có lớp 12B và 12C có: 2 cách
+answer4: d) Xác suất để lớp nào cũng có học sinh được chọn là 7/9
+Type: multi
+Key: 0,1,0,0
+
+Ask31: CHỌN CÁC Ý ĐÚNG: Một tổ có 7 nam và 3 nữ. Chọn ngẫu nhiên 2 người.
+answer1: a) Chọn 2 học sinh tùy ý từ 10 học sinh có: 45 cách
+answer2: b) Chọn 2 học sinh không có học sinh nữ có: 20 cách
+answer3: c) Chọn 2 học sinh chỉ có học sinh nữ có: 3 cách
+answer4: d) Xác suất để có ít nhất một nữ bằng: 4/15
+Type: multi
+Key: 1,0,1,0
+
+Ask32: Phương trình ∆ qua A(-4; 0), B(0; -2) là x + by + c = 0. Tính b^2 + c^2?
+Type: short
+Key: 20
+
+Ask33: Cho d: 4x - y + 11 = 0. Phương trình d1 qua M(-2; 1) song song d có dạng ax + by + c' = 0. Tính a + b + c'?
+Type: short
+Key: 12
+
+Ask34: Mái vòm elip rộng 10m, cao 3m. Tính chiều cao h tại điểm cách tâm 2m.
+Type: short
+Key: 2.75
+
+Ask35: Tìm số hạng chứa x trong khai triển (3x - 2)^4. (Chỉ lấy phần hệ số của x)
+Type: short
+Key: -96
+
+Ask36: Tìm hệ số của x^2 trong khai triển (x + √2)^4.
+Type: short
+Key: 108
+
+Ask37: Tính xác suất để bạn An đạt được 8 điểm (làm đúng 7 câu đầu, 3 câu cuối theo sơ đồ cây). (Nhập dưới dạng số thập phân làm tròn hàng phần trăm)
+Type: short
+Key: 0.08
+
+Ask38: Lấy ngẫu nhiên một thẻ từ 30 thẻ. Tính xác suất để thẻ được lấy ghi một số không chia hết cho 5.
+Type: short
+Key: 0.8
+
+Ask39: Điểm Toán nhóm 6 bạn: 7 6 8 5 9 10. Tính phương sai (làm tròn hàng phần trăm).
+Type: short
+Key: 2.91
+
+Ask40: Điểm Ngữ văn lớp 10D: 7 8 7.5 7 6 6.5 8 7. Tính độ lệch chuẩn (làm tròn hàng phần trăm).
+Type: short
+Key: 0.70
+
+Ask41: Đường cao tốc ∆: 3x - 4y + 10 = 0. Tính góc giữa lộ trình d (qua B(4; 2), VTCP u(1; 7)) và ∆.
+Type: short
+Key: 45
