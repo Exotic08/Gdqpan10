@@ -245,7 +245,7 @@ Key: 0.08
 
 Ask38: Lấy ngẫu nhiên một thẻ từ 30 thẻ. Tính xác suất để thẻ được lấy ghi một số không chia hết cho 5.
 Type: short
-Key: 0.8
+Key: 0.42
 
 Ask39: Điểm Toán nhóm 6 bạn: 7 6 8 5 9 10. Tính phương sai (làm tròn hàng phần trăm).
 Type: short
