@@ -209,7 +209,7 @@ answer2: b) Chọn 5 học sinh chỉ có lớp 12A và 12B có: 21 cách
 answer3: c) Chọn 5 học sinh chỉ có lớp 12B và 12C có: 2 cách
 answer4: d) Xác suất để lớp nào cũng có học sinh được chọn là 7/9
 Type: multi
-Key: 0,1,0,0
+Key: 0,1,0,1
 
 Ask31: CHỌN CÁC Ý ĐÚNG: Một tổ có 7 nam và 3 nữ. Chọn ngẫu nhiên 2 người.
 answer1: a) Chọn 2 học sinh tùy ý từ 10 học sinh có: 45 cách
