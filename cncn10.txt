@@ -310,7 +310,7 @@ answer1: Năng lượng.
 answer2: Thẩm mĩ.
 answer3: Vòng đời sản phẩm.
 answer4: Phát triển bền vững.
-Key: 4
+Key: 1
 
 Ask45: Khi đánh giá, nếu giải pháp thiết kế ĐƯỢC chấp nhận, người thiết kế tiếp tục:
 answer1: Bước 2.
