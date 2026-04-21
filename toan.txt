@@ -201,7 +201,7 @@ answer2: b) Đường kính của đường tròn (C) bằng √(50/9)
 answer3: c) Đường tròn (C) đi qua điểm N(4; 2)
 answer4: d) Độ dài đoạn IO = √170/3
 Type: multi
-Key: 0,0,0,0
+Key: 0,0,1,1
 
 Ask30: CHỌN CÁC Ý ĐÚNG: Đội văn nghệ gồm 4 HS lớp 12A, 3 HS lớp 12B, 2 HS lớp 12C. Chọn ngẫu nhiên 5 HS.
 answer1: a) Chọn 5 học sinh tùy ý từ 9 học sinh có: 120 cách
