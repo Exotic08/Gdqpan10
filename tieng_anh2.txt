@@ -146,7 +146,7 @@ Key: If you didn't live so far away, I would see you very often.
 
 Ask24: Viết lại câu dùng mệnh đề quan hệ: "His grandmother had a great influence on his life. She was a hard working woman."
 Type: short
-Key: His grandmother, who was a hard-working woman, had a great influence on his life.
+Key: His grandmother, who was a hard working woman, had a great influence on his life.
 
 Ask25: Viết lại câu so sánh nhất: "No other country is wealthier than Japan."
 Type: short
